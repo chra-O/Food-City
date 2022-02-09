@@ -1,0 +1,16 @@
+.login{
+    width: 360px;
+    height: 401px;
+}
+.signup{
+    width: 360px;
+    height: 73px;
+}
+.title{
+    background-repeat: no-repeat;
+    background-position: 0 -130px;
+    height: 51px;
+    width: 175px;
+    margin :22px auto 12px; 
+    font-size: 20px;
+}
