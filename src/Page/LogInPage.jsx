@@ -4,12 +4,12 @@ export default function LogInPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [hasfild, sethasfild] = useState(false);
   const fromRef = useRef(null);
-/////////////
+  /////////////
   const pressShow = (e) => {
     e.preventDefault();
     setShowPassword(!showPassword);
   };
-////////////
+  ////////////
   const handelChange = () => {
     const form = fromRef.current;
     if (
@@ -79,9 +79,42 @@ export default function LogInPage() {
                 >
                   Log In
                 </button>
-              </form>
+              </form>{" "}
+              <div className=" flex space-x-2 w-64 mt-4 items-center">
+                <span className="bg-gray-300 h-px  flex-1" />
+                <span className="p-2 uppercase text-xs text-gray-400 font-semibold">
+                  or
+                </span>
+                <span className="bg-gray-300 h-px flex-1" />
+              </div>
+              <button className="mt-4 flex">
+                <img
+                  src="http://localhost:3000/image/facebook.png"
+                  className="w-5 mr-2"
+                  alt=""
+                ></img>
+                <span className="text-blue-900 font-semibold text-sm ">
+                  Log in with Facebook
+                </span>
+              </button>
+              <button className="mt-6">
+                <span className="text-blue-900 font-semibold text-xs  ">
+                  Forgrt Password?
+                </span>
+              </button>
             </div>
-            <div className="signup   border border-gray-300 border-solid bg-white"></div>
+            <div className="signup  flex justify-center flex-col items-center border border-gray-300 border-solid bg-white">
+              <div >
+                <p>
+                  Don't have an account?{" "}
+                  <button className="">
+                    <span className="text-blue-400 font-semibold  ">
+                    Sign Up
+                    </span>
+                  </button>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

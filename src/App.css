@@ -1,6 +1,6 @@
 .login {
   width: 360px;
-  height: 401px;
+  height: 381px;
 }
 .signup {
   width: 360px;
@@ -9,7 +9,7 @@
 .foodLogin {
   background-position: 0 -130px;
   height: 51px;
-  /* width: 175px; */
+  
 
   font-family: "Brush Script MT", "Brush Script Std", "cursive";
 }
