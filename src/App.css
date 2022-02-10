@@ -1,14 +1,15 @@
-.login{
-    width: 360px;
-    height: 401px;
+.login {
+  width: 360px;
+  height: 401px;
 }
-.signup{
-    width: 360px;
-    height: 73px;
+.signup {
+  width: 360px;
+  height: 73px;
 }
-.title{
-  
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-   
-  
+.foodLogin {
+  background-position: 0 -130px;
+  height: 51px;
+  /* width: 175px; */
+
+  font-family: "Brush Script MT", "Brush Script Std", "cursive";
 }
