@@ -26,12 +26,12 @@ export default function LogInPage() {
   return (
     <>
       <div className="flex justify-center flex-col items-center h-screen bg-slate-50">
-        <div className="grid grid-cols-1 sm:grid-cols-2 ">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2">
           {" "}
-          <div className="invisible sm:visible">
+          <div className="invisible sm:invisible md:visible">
             <img
               src="http://localhost:3000/image/logo.png"
-              className=" sm:w-80 mt-16 mr-16 w-0"
+              className=" sm:w-0 mt-16 mr-16 w-0 md:w-80"
               alt=""
             ></img>
           </div>
