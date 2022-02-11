@@ -57,7 +57,9 @@ export default function ForgetPassword() {
             <span className="bg-gray-300 h-px flex-1" />
           </div>
           <button className=" font-semibold text-gray-800 ">
-            Create New Account
+            <p>
+              <Link to="/signup"> Create New Account</Link>
+            </p>
           </button>
           <div className="flex justify-center flex-col  items-center  bg-gray-100 h-16 w-full mt-16 border-gray-300 border-solid  border ">
             <button className="font-semibold text-gray-800">

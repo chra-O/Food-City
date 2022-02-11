@@ -28,7 +28,6 @@ export default function LogInPage() {
     <>
       <div className="flex justify-center flex-col items-center h-screen bg-slate-50">
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2">
-       
           <div className="invisible sm:invisible md:visible">
             <img
               src="http://localhost:3000/image/logo.png"
@@ -38,10 +37,11 @@ export default function LogInPage() {
           </div>
           <div className="">
             <div className=" login flex flex-col items-center border border-gray-300 border-solid p-8 pb-4 bg-white mb-3 ">
-              <h1 className="foodLogin text-5xl text-center">Log in</h1>
+              <h1 className="foodLogin text-5xl text-center text-gray-700">
+                Log in
+              </h1>
               <form ref={fromRef} className="w-72 flex flex-col gap-1 mt-8">
                 <div className="relative">
-               
                   <input
                     onChange={handelChange}
                     name="username"
@@ -112,7 +112,7 @@ export default function LogInPage() {
                   Don't have an account?{" "}
                   <button className="">
                     <span className="text-blue-400 font-semibold  ">
-                      Sign Up
+                      <Link to="/signup"> Sign Up</Link>
                     </span>
                   </button>
                 </p>
@@ -122,5 +122,5 @@ export default function LogInPage() {
         </div>
       </div>
     </>
-  )
+  );
 }

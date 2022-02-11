@@ -9,11 +9,18 @@
 .foodLogin {
   background-position: 0 -130px;
   height: 51px;
-  
 
   font-family: "Brush Script MT", "Brush Script Std", "cursive";
 }
-.fogerPass{
+.fogerPass {
   width: 400px;
   height: 520px;
+}
+.creatAccount {
+  width: 365px;
+  height: 530px;
+}
+.signupCreat {
+  width: 365px;
+  height: 73px;
 }
