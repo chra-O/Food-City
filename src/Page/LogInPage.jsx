@@ -26,12 +26,12 @@ export default function LogInPage() {
   return (
     <>
       <div className="flex justify-center flex-col items-center h-screen bg-slate-50">
-        <div className="grid grid-cols-2 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 ">
           {" "}
-          <div className="">
+          <div className="invisible sm:visible">
             <img
               src="http://localhost:3000/image/logo.png"
-              className="w-80 mt-16 mr-10"
+              className=" sm:w-80 mt-16 mr-16 w-0"
               alt=""
             ></img>
           </div>
@@ -104,12 +104,12 @@ export default function LogInPage() {
               </button>
             </div>
             <div className="signup  flex justify-center flex-col items-center border border-gray-300 border-solid bg-white">
-              <div >
+              <div>
                 <p>
                   Don't have an account?{" "}
                   <button className="">
                     <span className="text-blue-400 font-semibold  ">
-                    Sign Up
+                      Sign Up
                     </span>
                   </button>
                 </p>
