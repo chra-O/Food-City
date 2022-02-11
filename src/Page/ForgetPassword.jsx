@@ -49,7 +49,7 @@ export default function ForgetPassword() {
               Log In
             </button>
           </form>
-          <div className=" flex space-x-2 w-64 mt-8 items-center ">
+          <div className=" flex space-x-2 w-64 mt-6 items-center ">
             <span className="bg-gray-300 h-px  flex-1" />
             <span className="p-2 uppercase text-xs text-gray-400 font-semibold">
               or
@@ -59,7 +59,7 @@ export default function ForgetPassword() {
           <button className=" font-semibold text-gray-800 ">
             Create New Account
           </button>
-          <div className="flex justify-center flex-col  items-center  bg-gray-100 h-14 w-full mt-16 border-gray-300 border-solid  border ">
+          <div className="flex justify-center flex-col  items-center  bg-gray-100 h-16 w-full mt-16 border-gray-300 border-solid  border ">
             <button className="font-semibold text-gray-800">
               <Link to="/">Back to Login</Link>
             </button>
