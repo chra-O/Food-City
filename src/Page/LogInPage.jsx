@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function LogInPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -27,7 +28,7 @@ export default function LogInPage() {
     <>
       <div className="flex justify-center flex-col items-center h-screen bg-slate-50">
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2">
-          {" "}
+       
           <div className="invisible sm:invisible md:visible">
             <img
               src="http://localhost:3000/image/logo.png"
@@ -40,7 +41,7 @@ export default function LogInPage() {
               <h1 className="foodLogin text-5xl text-center">Log in</h1>
               <form ref={fromRef} className="w-72 flex flex-col gap-1 mt-8">
                 <div className="relative">
-                  {" "}
+               
                   <input
                     onChange={handelChange}
                     name="username"
@@ -94,12 +95,14 @@ export default function LogInPage() {
                   alt=""
                 ></img>
                 <span className="text-blue-900 font-semibold text-sm ">
-                  Log in with Facebook
+                  <a href="https://www.facebook.com/login">
+                    Log in with Facebook
+                  </a>
                 </span>
               </button>
               <button className="mt-6">
                 <span className="text-blue-900 font-semibold text-xs  ">
-                  Forgrt Password?
+                  <Link to="./ForgetPassword">Forgrt Password?</Link>
                 </span>
               </button>
             </div>
@@ -119,5 +122,5 @@ export default function LogInPage() {
         </div>
       </div>
     </>
-  );
+  )
 }
