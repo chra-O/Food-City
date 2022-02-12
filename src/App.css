@@ -24,3 +24,9 @@
   width: 365px;
   height: 73px;
 }
+.Homelogo {
+  background-position: 0 -130px;
+  height: 35px;
+
+  font-family: "Brush Script MT", "Brush Script Std", "cursive";
+}

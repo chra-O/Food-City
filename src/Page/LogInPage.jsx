@@ -78,7 +78,7 @@ export default function LogInPage() {
                     hasfild ? "bg-gray-900" : "bg-gray-700"
                   } w-full mt-2 h-8 rounded text-white  text-sm font-medium py-1`}
                 >
-                 <Link to="/home"> Log In</Link>
+                  <Link to="/home"> Log In</Link>
                 </button>
               </form>{" "}
               <div className=" flex space-x-2 w-64 mt-4 items-center">
