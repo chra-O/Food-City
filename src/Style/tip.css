@@ -23,3 +23,21 @@
   transform: translate(-50%);
   content: "";
 }
+.tip{
+  
+  animation-name: anim;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+

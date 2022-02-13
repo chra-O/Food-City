@@ -51,20 +51,20 @@ export default function NavBar() {
               ></img>
             )}
           </div>
-          <div className="relative">
+          <div className="relative flex">
             <img
               src="http://localhost:3000/image/home1.png"
               className="h-7 w-7 mt-2 m-3 text-gray-400 inline cursor-pointer "
               alt=""
             ></img>
-            <div className="relative inline">
+            <div className="relative ">
               {" "}
               <img
                 src="http://localhost:3000/image/messanger1.png"
                 className="h-7 w-7 mt-2 m-3 text-gray-400 inline cursor-pointer"
                 alt=""
               ></img>
-              <span className="absolute -top-1  -right-0 bg-red-500  rounded-full  h-4 w-4  text-white  text-xs  items-center  justify-center flex leading-none">
+              <span className="absolute top-2  -right-0 bg-red-500  rounded-full  h-4 w-4  text-white  text-xs  items-center  justify-center flex leading-none">
                 3
               </span>
             </div>
@@ -79,17 +79,17 @@ export default function NavBar() {
               className="h-7 w-7 mt-2 m-3 text-gray-400 inline cursor-pointer"
               alt=""
             ></img>
-            <div className="relative inline">
+            <div className="relative ">
               {" "}
               <img
                 src="http://localhost:3000/image/heart1.png"
                 className="h-7 w-7 mt-2 m-3 text-gray-400 inline cursor-pointer"
                 alt=""
               ></img>
-              <div className=" absolute w-1 h-1  left-8 top-7 -translate-x-1/2  bg-red-600  rounded-full"></div>
+              <div className=" absolute w-1 h-1  left-1/2 top-10 -translate-x-1/2  bg-red-600  rounded-full"></div>
               <NotificationTip />
             </div>
-            <div className="relative inline">
+            <div className="relative ">
               {" "}
               <img
                 src="http://localhost:3000/image/girl.png"
