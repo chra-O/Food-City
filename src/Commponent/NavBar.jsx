@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import NotificationTip from "./NotificationTip";
 
 export default function NavBar() {
   const [search, setSearch] = useState(true);
@@ -86,6 +87,7 @@ export default function NavBar() {
                 alt=""
               ></img>
               <div className=" absolute w-1 h-1  left-8 top-7 -translate-x-1/2  bg-red-600  rounded-full"></div>
+              <NotificationTip />
             </div>
             <div className="relative inline">
               {" "}
@@ -94,9 +96,7 @@ export default function NavBar() {
                 className="h-7 w-7 mt-2 m-3 text-gray-400 inline cursor-pointer bg-slate-500 rounded-full"
                 alt=""
               ></img>
-             
             </div>
-          
           </div>
         </div>
       </div>

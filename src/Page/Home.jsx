@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../Commponent/NavBar";
+import "../Style/tip.css"
 
 export default function Home() {
   return (
