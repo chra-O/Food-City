@@ -47,7 +47,7 @@
   border-bottom-color: #fff;
 
   left: 50%;
-  transform: translate(-50%, -130%);
+  transform: translate(-50%, -120%);
 }
 .search,
 .search::before {
@@ -61,6 +61,32 @@
   position: absolute;
   top: 0;
   left: 50%;
+  transform: translate(-50%);
+  content: "";
+}
+
+.profile::before {
+  position: absolute;
+  content: " ";
+  
+  border: 20px solid transparent;
+  border-bottom-color: #fff;
+
+  left: 71%;
+  transform: translate(-20%, -120%);
+}
+.profile,
+.profile::before {
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+}
+.profile::after {
+  height: 10%;
+  width: 40%;
+  
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 71%;
   transform: translate(-50%);
   content: "";
 }

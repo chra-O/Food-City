@@ -1,27 +1,47 @@
 import React, { useRef, useState, useEffect } from "react";
 import NotificationTip from "./NotificationTip";
+import ProfileTip from "./ProfileTip";
 import SearchTip from "./SearchTip";
 
 export default function NavBar() {
   const [search, setSearch] = useState(true);
   const [corss, setcross] = useState(false);
   const [searchTip, setSearchTip] = useState(false);
+  const [profile, setprofile] = useState(false);
   const inputref = useRef(null);
+  const profileRef = useRef(null);
   useEffect(() => {
     const oustsiteClick = (e) => {
       if (!inputref?.current?.contains(e.target)) {
         setcross(false);
         setSearch(true);
         setSearchTip(false);
+        
       } else {
         setcross(true);
         setSearch(false);
         setSearchTip(true);
+      
       }
     };
     document.addEventListener("mousedown", oustsiteClick);
     return () => {
       document.removeEventListener("mousedown", oustsiteClick);
+    };
+  }, []);
+  useEffect(() => {
+    const profileClick = (e) => {
+      if (!profileRef?.current?.contains(e.target)) {
+      setprofile(false)
+        
+      } else {
+        setprofile(true)
+      
+      }
+    };
+    document.addEventListener("mousedown", profileClick);
+    return () => {
+      document.removeEventListener("mousedown", profileClick);
     };
   }, []);
   return (
@@ -33,7 +53,7 @@ export default function NavBar() {
           </h1>
           <div
             ref={inputref}
-            className="relative h-8 mt-2 p-1 pl-2 rounded-md sm:text-sm  border-solid  border-[1.2px]  border-gray-300 flex bg-gray-50 invisible md:visible w-0 md:w-fit "
+            className="relative h-8 mt-2 p-1 pl-2 rounded-md sm:text-sm  border-solid  border-[1.2px]  border-gray-300 flex bg-gray-100 invisible md:visible w-0 md:w-fit "
           >
             {search && (
               <img
@@ -45,14 +65,16 @@ export default function NavBar() {
             <input
               type="text"
               placeholder="search"
-              className=" inputNavbar  p-1 bg-gray-50  block  focus:outline-none"
+              className=" inputNavbar  p-1 bg-gray-100  block  focus:outline-none"
             ></input>
             {corss && (
               <img
                 src="http://localhost:3000/image/cross.png"
                 className="h-4 w-4 mt-1  text-gray-400 cursor-pointer "
                 alt=""
-                onClick={()=>{ setSearchTip(false);}}
+                onClick={() => {
+                  setSearchTip(false);
+                }}
               ></img>
             )}
             {searchTip && <SearchTip />}
@@ -95,13 +117,17 @@ export default function NavBar() {
               <div className=" absolute w-1 h-1  left-1/2 top-10 -translate-x-1/2  bg-red-600  rounded-full"></div>
               <NotificationTip />
             </div>
-            <div className="relative ">
+            <div className="relative " ref={profileRef}>
               {" "}
               <img
                 src="http://localhost:3000/image/girl.png"
                 className="h-7 w-7 mt-2 m-3 text-gray-400 inline cursor-pointer bg-slate-500 rounded-full"
                 alt=""
+                onClick={() => {
+                  setprofile(!profile);
+                }}
               ></img>
+              {profile && <ProfileTip />}
             </div>
           </div>
         </div>
