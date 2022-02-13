@@ -50,8 +50,9 @@ export default function NavBar() {
             {corss && (
               <img
                 src="http://localhost:3000/image/cross.png"
-                className="h-4 w-4 mt-1  text-gray-400 "
+                className="h-4 w-4 mt-1  text-gray-400 cursor-pointer "
                 alt=""
+                onClick={()=>{ setSearchTip(false);}}
               ></img>
             )}
             {searchTip && <SearchTip />}
