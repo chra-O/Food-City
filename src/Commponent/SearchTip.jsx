@@ -3,7 +3,7 @@ import React from "react";
 export default function SearchTip() {
   return (
     <>
-      <div className="search absolute top-12 bg-white w-96 left-1/2 -translate-x-1/2 shadow-xl  p-4 mb-2 rounded-lg  h-96   ">
+      <div className="search absolute top-12 bg-white w-96 left-1/2 -translate-x-1/2 shadow-xl  p-4 mb-2 rounded-lg  h-96  overflow-y-auto ">
         <div className="flex justify-between mb-5">
           <h3 className=" text-lg text-black">Recent</h3>
           <button className=" text-blue-400 text-lg ">Clear All</button>
@@ -32,7 +32,6 @@ export default function SearchTip() {
             ></img>
           </div>
         </div>
-       
       </div>{" "}
     </>
   );

@@ -5,15 +5,18 @@ import SearchTip from "./SearchTip";
 export default function NavBar() {
   const [search, setSearch] = useState(true);
   const [corss, setcross] = useState(false);
+  const [searchTip, setSearchTip] = useState(false);
   const inputref = useRef(null);
   useEffect(() => {
     const oustsiteClick = (e) => {
       if (!inputref?.current?.contains(e.target)) {
         setcross(false);
         setSearch(true);
+        setSearchTip(false);
       } else {
         setcross(true);
         setSearch(false);
+        setSearchTip(true);
       }
     };
     document.addEventListener("mousedown", oustsiteClick);
@@ -51,7 +54,7 @@ export default function NavBar() {
                 alt=""
               ></img>
             )}
-            <SearchTip />
+            {searchTip && <SearchTip />}
           </div>
           <div className="relative flex">
             <img
