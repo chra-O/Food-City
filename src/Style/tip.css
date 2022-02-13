@@ -6,8 +6,8 @@
   left: 50%;
   transform: translate(-50%, -130%);
 }
-.tip{
-    background-color: #fe4444;
+.tip {
+  background-color: #fe4444;
 }
 .tip,
 .tip::before {
@@ -23,8 +23,7 @@
   transform: translate(-50%);
   content: "";
 }
-.tip{
-  
+.tip {
   animation-name: anim;
   animation-duration: 2s;
   animation-iteration-count: 1;
@@ -40,4 +39,27 @@
     opacity: 1;
   }
 }
+.search::before {
+  position: absolute;
+  content: " ";
+  
+  border: 20px solid transparent;
+  border-bottom-color: #fff;
 
+  left: 50%;
+  transform: translate(-50%, -130%);
+}
+.search,
+.search::before {
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+}
+.search::after {
+  height: 30%;
+  width: 40%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  content: "";
+}

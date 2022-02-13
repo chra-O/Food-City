@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import NotificationTip from "./NotificationTip";
+import SearchTip from "./SearchTip";
 
 export default function NavBar() {
   const [search, setSearch] = useState(true);
@@ -50,6 +51,7 @@ export default function NavBar() {
                 alt=""
               ></img>
             )}
+            <SearchTip />
           </div>
           <div className="relative flex">
             <img
@@ -64,7 +66,7 @@ export default function NavBar() {
                 className="h-7 w-7 mt-2 m-3 text-gray-400 inline cursor-pointer"
                 alt=""
               ></img>
-              <span className="absolute top-2  -right-0 bg-red-500  rounded-full  h-4 w-4  text-white  text-xs  items-center  justify-center flex leading-none">
+              <span className="absolute top-2 -right-0 bg-red-500  rounded-full  h-4 w-4  text-white  text-xs  items-center  justify-center flex leading-none">
                 3
               </span>
             </div>

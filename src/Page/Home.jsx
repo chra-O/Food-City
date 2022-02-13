@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <div className="mt-20">
+      <div className="mt-20 bg-slate-500">
         to sed incidunt. Lorem ipsum dolor sit amet consectetur adipisicing
         elit. Itaque ducimus nemo molestiae officia suscipit illo sint fugit
         cumque rerum, accusamus nihil, tenetur omnis deleniti molestias laborum
