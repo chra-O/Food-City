@@ -2,6 +2,73 @@ import React from "react";
 import NavBar from "../Commponent/NavBar";
 
 export default function Profile() {
+  const savedStory = [
+    {
+      id: "1",
+      username: "aljhsjjxxbi aadr",
+      img: "http://localhost:3000/image/girl.png",
+    },
+    {
+      id: "2",
+      username: "ali aadr",
+      img: "http://localhost:3000/image/girl.png",
+    },
+    {
+      id: "3",
+      username: "ali aadr",
+      img: "http://localhost:3000/image/girl.png",
+    },
+    {
+      id: "4",
+      username: "ali aadr",
+      img: "http://localhost:3000/image/girl.png",
+    },
+    {
+      id: "5",
+      username: "ali aadr",
+      img: "http://localhost:3000/image/girl.png",
+    },
+    {
+      id: "6",
+      username: "ali aadr",
+      img: "http://localhost:3000/image/girl.png",
+    },
+    {
+      id: "6",
+      username: "ali aadr",
+      img: "http://localhost:3000/image/girl.png",
+    },
+    {
+      id: "6",
+      username: "ali aadr",
+      img: "http://localhost:3000/image/girl.png",
+    },
+    {
+      id: "6",
+      username: "ali aadr",
+      img: "http://localhost:3000/image/girl.png",
+    },
+    {
+      id: "6",
+      username: "ali aadr",
+      img: "http://localhost:3000/image/girl.png",
+    },
+    {
+      id: "6",
+      username: "ali aadr",
+      img: "http://localhost:3000/image/girl.png",
+    },
+    {
+      id: "6",
+      username: "ali aadr",
+      img: "http://localhost:3000/image/girl.png",
+    },
+    {
+      id: "6",
+      username: "ali ahshsjjsjadr",
+      img: "http://localhost:3000/image/girl.png",
+    },
+  ];
   return (
     <>
       <NavBar
@@ -27,17 +94,18 @@ export default function Profile() {
             </div>
             <div className="col-span-3 ml-6 sm:ml-16 mt-5">
               <div>
-              <span className="text-gray-800 text-3xl  font-thin ">
-                chra othman{" "}
-              </span>
-              <div className="cursor-pointer  inline text-gray-900 ml-2 font-semibold p-1 px-2   border border-gray-300  rounded  ">
-                Edit Profile
+                <span className="text-gray-800 text-3xl  font-thin ">
+                  chra othman{" "}
+                </span>
+                <div className="cursor-pointer  inline text-gray-900 ml-2 font-semibold p-1 px-2   border border-gray-300  rounded  ">
+                  Edit Profile
+                </div>
+                <img
+                  src="http://localhost:3000/image/setting.png"
+                  className="h-6  w-6 ml-4  inline "
+                  alt=""
+                ></img>
               </div>
-              <img
-                src="http://localhost:3000/image/setting.png"
-                className="h-6  w-6 ml-4  inline "
-                alt=""
-              ></img></div>
               <div className="mt-6 justify-between flex w-80">
                 <span className="block text-lg  ">
                   0 <p className="inline text-gray-500 ">posts</p>
@@ -54,7 +122,40 @@ export default function Profile() {
                 <p className=" text-gray-700 text-lg"> who paints sometimes</p>
               </div>
             </div>
-            <div> </div>
+          </div>
+          <div>
+            <div className="relative">
+              <div className="  flex space-x-10 overflow-x-scroll max-w-5xl  p-4 scroll-smooth scrollbar-hide mt-16 ">
+                {savedStory.map((story) => {
+                  return (
+                    <div className=" shrink-0  ">
+                      <div className="bg-gray-50 rounded-full p-1 border border-gray-400">
+                        <img
+                          src={story.img}
+                          className="rounded-full bg-slate-600  sm:w-14  sm:h-14 md:h-20 md:w-20 lg:h-24 lg:w-24 w-14 h-14    "
+                          alt=""
+                        ></img>
+                      </div>
+                      <p className=" sm:w-24 w-8 truncate text-center text-gray-700   font-semibold ">
+                        {story.username}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className=" absolute flex top-0  sm:-left-6 z-10 w-full h-full justify-between  items-center">
+                <img
+                  src="http://localhost:3000/image/left.png"
+                  className="  inline  w-6 h-6   "
+                  alt=""
+                ></img>
+                <img
+                  src="http://localhost:3000/image/right.png"
+                  className="  inline w-6 h-6   "
+                  alt=""
+                ></img>
+              </div>
+            </div>
           </div>
         </div>
       </div>
