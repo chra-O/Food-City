@@ -1,15 +1,20 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-
-}
+  not: true,
+};
 
 const slice = createSlice({
-  name: "food",
+  name: "notify",
   initialState,
-  reducers: {}
+  reducers: {
+    isShow: (state) => {
+      state.not =!state.not;
+      // localStorage.setItem("showNotificationTip", JSON.stringify(state.not));
+    },
+  },
 });
 
-export const {} = slice.actions
+export const { isShow } = slice.actions;
 
-export default slice.reducer
+export default slice.reducer;

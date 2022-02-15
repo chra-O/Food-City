@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import Slice from "./slice";
+import Slice from "./slice";
 
  const store =configureStore({
   reducer: {
-    // food: Slice,
+    notify: Slice,
   },
 });
 export default store

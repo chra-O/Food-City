@@ -3,13 +3,17 @@ import { Link } from "react-router-dom";
 import NotificationTip from "./NotificationTip";
 import ProfileTip from "./ProfileTip";
 import SearchTip from "./SearchTip";
-
+import { useDispatch } from "react-redux";
+import { isShow } from "../Redux/slice";
+import { useSelector } from "react-redux";
 export default function NavBar() {
   const [search, setSearch] = useState(true);
   const [corss, setcross] = useState(false);
   const [searchTip, setSearchTip] = useState(false);
   const [profile, setprofile] = useState(false);
-  const [notification, setnotification] = useState(true);
+  const showNotification = useSelector((state) => state.notify.not);
+
+  const dispatch = useDispatch();
   const inputref = useRef(null);
   const profileRef = useRef(null);
   useEffect(() => {
@@ -120,11 +124,11 @@ export default function NavBar() {
                   className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
                   alt=""
                   onClick={() => {
-                    setnotification(false);
+                    dispatch(isShow());
                   }}
                 ></img>
               </Link>
-              {notification && (
+              {showNotification && (
                 <div className=" absolute w-1 h-1  left-1/2 top-12 -translate-x-1/2  bg-red-600  rounded-full">
                   <NotificationTip />{" "}
                 </div>
