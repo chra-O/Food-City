@@ -16,12 +16,10 @@ export default function NavBar() {
         setcross(false);
         setSearch(true);
         setSearchTip(false);
-        
       } else {
         setcross(true);
         setSearch(false);
         setSearchTip(true);
-      
       }
     };
     document.addEventListener("mousedown", oustsiteClick);
@@ -32,11 +30,9 @@ export default function NavBar() {
   useEffect(() => {
     const profileClick = (e) => {
       if (!profileRef?.current?.contains(e.target)) {
-      setprofile(false)
-        
+        setprofile(false);
       } else {
-        setprofile(true)
-      
+        setprofile(true);
       }
     };
     document.addEventListener("mousedown", profileClick);
@@ -48,12 +44,12 @@ export default function NavBar() {
     <>
       <div className="shadow-sm border-b bg-white w-full top-0 fixed">
         <div className=" flex justify-around sm:max-w-5xl max-w-2xl sm:mx-5 xl:mx-auto  sm:p-2 ">
-          <h1 className=" relative Homelogo text-4xl  text-gray-700 ">
+          <h1 className=" relative Homelogo text-4xl mt-2 text-gray-700 ">
             Food City
           </h1>
           <div
             ref={inputref}
-            className="relative h-8 mt-2 p-1 pl-2 rounded-md sm:text-sm  border-solid  border-[1.2px]  border-gray-300 flex bg-gray-100 invisible md:visible w-0 md:w-fit "
+            className="relative h-8 mt-4 p-1 pl-2 rounded-md sm:text-sm  border-solid  border-[1.2px]  border-gray-300 flex bg-gray-100 invisible md:visible w-0 md:w-fit "
           >
             {search && (
               <img
@@ -82,51 +78,52 @@ export default function NavBar() {
           <div className="relative flex">
             <img
               src="http://localhost:3000/image/home1.png"
-              className="h-7 w-7 mt-2 m-3 text-gray-400 inline cursor-pointer "
+              className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer "
               alt=""
             ></img>
             <div className="relative ">
               {" "}
               <img
                 src="http://localhost:3000/image/messanger1.png"
-                className="h-7 w-7 mt-2 m-3 text-gray-400 inline cursor-pointer"
+                className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
                 alt=""
               ></img>
-              <span className="absolute top-2 -right-0 bg-red-500  rounded-full  h-4 w-4  text-white  text-xs  items-center  justify-center flex leading-none">
+              <span className="absolute top-3 right-1 bg-red-500  rounded-full  h-4 w-4  text-white  text-xs  items-center  justify-center flex leading-none">
                 3
               </span>
             </div>
 
             <img
               src="http://localhost:3000/image/add1.png"
-              className="h-7 w-7 mt-2 m-3 text-gray-400 inline cursor-pointer"
+              className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
               alt=""
             ></img>
             <img
               src="http://localhost:3000/image/compass1.png"
-              className="h-7 w-7 mt-2 m-3 text-gray-400 inline cursor-pointer"
+              className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
               alt=""
             ></img>
             <div className="relative ">
               {" "}
               <img
                 src="http://localhost:3000/image/heart1.png"
-                className="h-7 w-7 mt-2 m-3 text-gray-400 inline cursor-pointer"
+                className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
                 alt=""
               ></img>
-              <div className=" absolute w-1 h-1  left-1/2 top-10 -translate-x-1/2  bg-red-600  rounded-full"></div>
+              <div className=" absolute w-1 h-1  left-1/2 top-12 -translate-x-1/2  bg-red-600  rounded-full"></div>
               <NotificationTip />
             </div>
             <div className="relative " ref={profileRef}>
               {" "}
               <img
                 src="http://localhost:3000/image/girl.png"
-                className="h-7 w-7 mt-2 m-3 text-gray-400 inline cursor-pointer bg-slate-500 rounded-full"
+                className="h-10 w-10 mt-2 m-3 text-gray-400 inline cursor-pointer bg-slate-500 rounded-full"
                 alt=""
                 onClick={() => {
                   setprofile(!profile);
                 }}
               ></img>
+            
               {profile && <ProfileTip />}
             </div>
           </div>
