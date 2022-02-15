@@ -4,15 +4,16 @@ import NotificationTip from "./NotificationTip";
 import ProfileTip from "./ProfileTip";
 import SearchTip from "./SearchTip";
 import { useDispatch } from "react-redux";
-import { isShow } from "../Redux/slice";
+import { isShowNotification } from "../Redux/slice";
+import { isShowmessanger } from "../Redux/slice";
 import { useSelector } from "react-redux";
-export default function NavBar() {
+export default function NavBar(props) {
   const [search, setSearch] = useState(true);
   const [corss, setcross] = useState(false);
   const [searchTip, setSearchTip] = useState(false);
   const [profile, setprofile] = useState(false);
   const showNotification = useSelector((state) => state.notify.not);
-
+  const showMassege = useSelector((state) => state.notify.messanger);
   const dispatch = useDispatch();
   const inputref = useRef(null);
   const profileRef = useRef(null);
@@ -85,7 +86,7 @@ export default function NavBar() {
             <Link to="/home">
               {" "}
               <img
-                src="http://localhost:3000/image/home1.png"
+                src={props.home}
                 className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer "
                 alt=""
               ></img>
@@ -96,23 +97,28 @@ export default function NavBar() {
               <Link to="/Messanger">
                 {" "}
                 <img
-                  src="http://localhost:3000/image/messanger1.png"
+                  src={props.messanger}
                   className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
                   alt=""
+                  onClick={() => {
+                    dispatch(isShowmessanger());
+                  }}
                 ></img>
               </Link>
-              <span className="absolute top-3 right-1 bg-red-500  rounded-full  h-4 w-4  text-white  text-xs  items-center  justify-center flex leading-none">
-                3
-              </span>
+              {showMassege && 
+                <span className="absolute top-3 right-1 bg-red-500  rounded-full  h-4 w-4  text-white  text-xs  items-center  justify-center flex leading-none">
+                  3
+                </span>
+              }
             </div>
 
             <img
-              src="http://localhost:3000/image/add1.png"
+              src={props.add}
               className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
               alt=""
             ></img>
             <img
-              src="http://localhost:3000/image/compass1.png"
+              src={props.compasss}
               className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
               alt=""
             ></img>
@@ -120,11 +126,11 @@ export default function NavBar() {
               {" "}
               <Link to="/Notification">
                 <img
-                  src="http://localhost:3000/image/heart1.png"
+                  src={props.not}
                   className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
                   alt=""
                   onClick={() => {
-                    dispatch(isShow());
+                    dispatch(isShowNotification());
                   }}
                 ></img>
               </Link>

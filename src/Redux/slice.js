@@ -2,19 +2,22 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   not: true,
+  messanger: true,
 };
 
 const slice = createSlice({
   name: "notify",
   initialState,
   reducers: {
-    isShow: (state) => {
-      state.not =!state.not;
-      // localStorage.setItem("showNotificationTip", JSON.stringify(state.not));
+    isShowNotification: (state) => {
+      state.not = false;
+    },
+    isShowmessanger: (state) => {
+      state.messanger = false;
     },
   },
 });
 
-export const { isShow } = slice.actions;
+export const { isShowNotification, isShowmessanger } = slice.actions;
 
 export default slice.reducer;
