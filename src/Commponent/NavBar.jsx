@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import NotificationTip from "./NotificationTip";
 import ProfileTip from "./ProfileTip";
 import SearchTip from "./SearchTip";
@@ -46,7 +47,7 @@ export default function NavBar() {
       <div className="shadow-sm border-b bg-white w-full top-0 fixed">
         <div className=" flex justify-around sm:max-w-5xl max-w-2xl sm:mx-5 xl:mx-auto  sm:p-2 ">
           <h1 className=" relative Homelogo text-4xl mt-2 text-gray-700 ">
-            Food City
+            <Link to="/home"> Food City</Link>
           </h1>
           <div
             ref={inputref}
@@ -77,18 +78,25 @@ export default function NavBar() {
             {searchTip && <SearchTip />}
           </div>
           <div className="relative flex">
-            <img
-              src="http://localhost:3000/image/home1.png"
-              className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer "
-              alt=""
-            ></img>
-            <div className="relative ">
+            <Link to="/home">
               {" "}
               <img
-                src="http://localhost:3000/image/messanger1.png"
-                className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
+                src="http://localhost:3000/image/home1.png"
+                className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer "
                 alt=""
               ></img>
+            </Link>
+
+            <div className="relative ">
+              {" "}
+              <Link to="/Messanger">
+                {" "}
+                <img
+                  src="http://localhost:3000/image/messanger1.png"
+                  className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
+                  alt=""
+                ></img>
+              </Link>
               <span className="absolute top-3 right-1 bg-red-500  rounded-full  h-4 w-4  text-white  text-xs  items-center  justify-center flex leading-none">
                 3
               </span>
@@ -106,15 +114,21 @@ export default function NavBar() {
             ></img>
             <div className="relative ">
               {" "}
-              <img
-                src="http://localhost:3000/image/heart1.png"
-                className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
-                alt=""
-                onClick={()=>{setnotification(false)}}
-              ></img>{" "}
-              <div className=" absolute w-1 h-1  left-1/2 top-12 -translate-x-1/2  bg-red-600  rounded-full">
-                {notification && <NotificationTip />}
-              </div>
+              <Link to="/Notification">
+                <img
+                  src="http://localhost:3000/image/heart1.png"
+                  className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
+                  alt=""
+                  onClick={() => {
+                    setnotification(false);
+                  }}
+                ></img>
+              </Link>
+              {notification && (
+                <div className=" absolute w-1 h-1  left-1/2 top-12 -translate-x-1/2  bg-red-600  rounded-full">
+                  <NotificationTip />{" "}
+                </div>
+              )}
             </div>
             <div className="relative " ref={profileRef}>
               {" "}
