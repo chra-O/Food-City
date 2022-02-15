@@ -8,6 +8,7 @@ export default function NavBar() {
   const [corss, setcross] = useState(false);
   const [searchTip, setSearchTip] = useState(false);
   const [profile, setprofile] = useState(false);
+  const [notification, setnotification] = useState(true);
   const inputref = useRef(null);
   const profileRef = useRef(null);
   useEffect(() => {
@@ -109,9 +110,11 @@ export default function NavBar() {
                 src="http://localhost:3000/image/heart1.png"
                 className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
                 alt=""
-              ></img>
-              <div className=" absolute w-1 h-1  left-1/2 top-12 -translate-x-1/2  bg-red-600  rounded-full"></div>
-              <NotificationTip />
+                onClick={()=>{setnotification(false)}}
+              ></img>{" "}
+              <div className=" absolute w-1 h-1  left-1/2 top-12 -translate-x-1/2  bg-red-600  rounded-full">
+                {notification && <NotificationTip />}
+              </div>
             </div>
             <div className="relative " ref={profileRef}>
               {" "}
@@ -120,10 +123,9 @@ export default function NavBar() {
                 className="h-10 w-10 mt-2 m-3 text-gray-400 inline cursor-pointer bg-slate-500 rounded-full"
                 alt=""
                 onClick={() => {
-                  setprofile(!profile);
+                  setprofile(profile);
                 }}
               ></img>
-            
               {profile && <ProfileTip />}
             </div>
           </div>
