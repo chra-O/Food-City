@@ -123,35 +123,35 @@ export default function Profile() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="w-full">
             <div className="relative">
               <div className="  flex space-x-10 overflow-x-scroll max-w-5xl  p-4 scroll-smooth scrollbar-hide mt-16 ">
                 {savedStory.map((story) => {
                   return (
                     <div className=" shrink-0  ">
-                      <div className="bg-gray-50 rounded-full p-1 border border-gray-400">
+                      <div className="bg-gray-50 rounded-full p-1 border border-gray-400 sm:w-14  sm:h-14 md:h-20 md:w-20 lg:h-24 lg:w-24 w-14 h-14 ">
                         <img
                           src={story.img}
-                          className="rounded-full bg-slate-600  sm:w-14  sm:h-14 md:h-20 md:w-20 lg:h-24 lg:w-24 w-14 h-14    "
+                          className="rounded-full bg-slate-600     "
                           alt=""
                         ></img>
                       </div>
-                      <p className=" sm:w-24 w-8 truncate text-center text-gray-700   font-semibold ">
+                      <p className=" sm:w-16 md:w-24 w-8 truncate text-center text-gray-700   font-semibold ">
                         {story.username}
                       </p>
                     </div>
                   );
                 })}
               </div>
-              <div className=" absolute flex top-0  sm:-left-6 z-10 w-full h-full justify-between  items-center">
+              <div className=" absolute flex top-0 md:-left-5 sm:-left-0  -left-2 z-10 w-full h-full justify-between   items-center">
                 <img
                   src="http://localhost:3000/image/left.png"
-                  className="  inline  w-6 h-6   "
+                  className="  inline  w-6 h-6    "
                   alt=""
                 ></img>
                 <img
                   src="http://localhost:3000/image/right.png"
-                  className="  inline w-6 h-6   "
+                  className="  inline w-6 h-6  "
                   alt=""
                 ></img>
               </div>
