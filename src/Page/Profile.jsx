@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import NavBar from "../Commponent/NavBar";
 
 export default function Profile() {
+  const storeRef = useRef(null);
+  const [left, setleft] = useState(false);
+  const [right, setRight] = useState(true);
   const savedStory = [
     {
       id: "1",
@@ -34,41 +37,50 @@ export default function Profile() {
       img: "http://localhost:3000/image/girl.png",
     },
     {
-      id: "6",
+      id: "7",
       username: "ali aadr",
       img: "http://localhost:3000/image/girl.png",
     },
     {
-      id: "6",
+      id: "8",
       username: "ali aadr",
       img: "http://localhost:3000/image/girl.png",
     },
     {
-      id: "6",
+      id: "9",
       username: "ali aadr",
       img: "http://localhost:3000/image/girl.png",
     },
     {
-      id: "6",
+      id: "10",
       username: "ali aadr",
       img: "http://localhost:3000/image/girl.png",
     },
     {
-      id: "6",
+      id: "11",
       username: "ali aadr",
       img: "http://localhost:3000/image/girl.png",
     },
     {
-      id: "6",
+      id: "12",
       username: "ali aadr",
       img: "http://localhost:3000/image/girl.png",
     },
     {
-      id: "6",
+      id: "13",
       username: "ali ahshsjjsjadr",
       img: "http://localhost:3000/image/girl.png",
     },
   ];
+  const scrollHundlle = () => {
+    if (storeRef.current.scrollLeft>0) {
+      setleft(true);
+      
+    } else {
+      setleft(false);
+ 
+    }
+  };
   return (
     <>
       <NavBar
@@ -123,12 +135,16 @@ export default function Profile() {
               </div>
             </div>
           </div>
-          <div className="w-full">
-            <div className="relative">
-              <div className="  flex space-x-10 overflow-x-scroll max-w-5xl  p-4 scroll-smooth scrollbar-hide mt-16 ">
+          <div className="">
+            <div className="relative ">
+              <div
+                ref={storeRef}
+                onScroll={scrollHundlle}
+                className="  flex space-x-10 overflow-x-scroll max-w-5xl  p-4 scroll-smooth scrollbar-hide mt-16 "
+              >
                 {savedStory.map((story) => {
                   return (
-                    <div className=" shrink-0  ">
+                    <div className=" shrink-0  " key={story.id}>
                       <div className="bg-gray-50 rounded-full p-1 border border-gray-400 sm:w-14  sm:h-14 md:h-20 md:w-20 lg:h-24 lg:w-24 w-14 h-14 ">
                         <img
                           src={story.img}
@@ -143,17 +159,25 @@ export default function Profile() {
                   );
                 })}
               </div>
-              <div className=" absolute flex top-0 md:-left-5 sm:-left-0  -left-2 z-10 w-full h-full justify-between   items-center">
-                <img
-                  src="http://localhost:3000/image/left.png"
-                  className="  inline  w-6 h-6    "
-                  alt=""
-                ></img>
+              <div className=" absolute flex -top-2 md:-left-5 sm:-left-0  -left-2 z-10 w-full h-full justify-between   items-center">
+                <button onClick={()=>{storeRef.current.scrollLeft=storeRef.current.scrollLeft-300}}>
+                  <img
+                    src="http://localhost:3000/image/left.png"
+                    className={`  inline  w-6 h-6   bg-gray-200 rounded-full opacity-50  cursor-pointer drop-shadow-lg  filter ${
+                      left ? `visible` : `invisible`
+                    } `}
+                    alt=""
+                  ></img>
+                </button>
+                <button onClick={()=>{storeRef.current.scrollLeft=storeRef.current.scrollLeft+300}}>
                 <img
                   src="http://localhost:3000/image/right.png"
-                  className="  inline w-6 h-6  "
+                  className={`inline w-6 h-6 bg-gray-200 rounded-full opacity-50 cursor-pointer drop-shadow-lg filter ${
+                    right ? `visible` : `invisible`
+                  }`}
                   alt=""
                 ></img>
+                </button>
               </div>
             </div>
           </div>
