@@ -80,6 +80,13 @@ export default function Profile() {
       setleft(false);
  
     }
+    if (storeRef.current.scrollLeft === storeRef.current.scrollWidth - storeRef.current.clientWidth) {
+      setRight(false);
+      
+    } else {
+      setRight(true);
+ 
+    }
   };
   return (
     <>
@@ -133,6 +140,7 @@ export default function Profile() {
                 <p className="font-semibold text-black text-lg"> Chra O</p>
                 <p className=" text-gray-700 text-lg"> who paints sometimes</p>
               </div>
+              <div className="text-blue-500 w-80 mt-2  "><p>#chra#food#word#fun#happy#quran#kurdistan</p></div>
             </div>
           </div>
           <div className="">
@@ -159,11 +167,11 @@ export default function Profile() {
                   );
                 })}
               </div>
-              <div className=" absolute flex -top-2 md:-left-5 sm:-left-0  -left-2 z-10 w-full h-full justify-between   items-center">
+              <div className=" absolute flex -top-2 md:-left-[25px] sm:-left-0  -left-2 z-10 w-full h-full justify-between   items-center">
                 <button onClick={()=>{storeRef.current.scrollLeft=storeRef.current.scrollLeft-300}}>
                   <img
                     src="http://localhost:3000/image/left.png"
-                    className={`  inline  w-6 h-6   bg-gray-200 rounded-full opacity-50  cursor-pointer drop-shadow-lg  filter ${
+                    className={`  inline  w-6 h-6   bg-white rounded-full opacity-50  cursor-pointer drop-shadow-lg  filter ${
                       left ? `visible` : `invisible`
                     } `}
                     alt=""
@@ -172,7 +180,7 @@ export default function Profile() {
                 <button onClick={()=>{storeRef.current.scrollLeft=storeRef.current.scrollLeft+300}}>
                 <img
                   src="http://localhost:3000/image/right.png"
-                  className={`inline w-6 h-6 bg-gray-200 rounded-full opacity-50 cursor-pointer drop-shadow-lg filter ${
+                  className={`inline w-6 h-6 bg-white rounded-full opacity-50 cursor-pointer drop-shadow-lg filter ${
                     right ? `visible` : `invisible`
                   }`}
                   alt=""
