@@ -9,68 +9,48 @@ export default function Profile() {
   const savedStory = [
     {
       id: "1",
-      username: "aljhsjjxxbi aadr",
-      img: "http://localhost:3000/image/girl.png",
+      username: "donat by chra",
+      img: "https://thekitchencommunity.org/wp-content/uploads/2021/03/43-Foods-That-Start-With-D-1200x900.jpg",
     },
     {
       id: "2",
-      username: "ali aadr",
-      img: "http://localhost:3000/image/girl.png",
+      username: "oreng",
+      img: "https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg",
     },
     {
       id: "3",
-      username: "ali aadr",
-      img: "http://localhost:3000/image/girl.png",
+      username: "pasta",
+      img: "http://giovanniskitchen.com.au/staging/wp-content/uploads/2018/06/pasta.jpg",
     },
     {
       id: "4",
-      username: "ali aadr",
-      img: "http://localhost:3000/image/girl.png",
+      username: "breakfast",
+      img: "https://static01.nyt.com/images/2021/02/17/dining/17tootired-grilled-cheese/17tootired-grilled-cheese-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
     },
     {
       id: "5",
-      username: "ali aadr",
-      img: "http://localhost:3000/image/girl.png",
+      username: "birthday",
+      img: "https://static.toiimg.com/thumb/86814019.cms?width=680&height=512&imgsize=51588",
     },
     {
       id: "6",
-      username: "ali aadr",
-      img: "http://localhost:3000/image/girl.png",
+      username: "fruit",
+      img: "https://post.healthline.com/wp-content/uploads/2018/06/fruit-732x549-thumbnail.jpg",
     },
     {
       id: "7",
-      username: "ali aadr",
-      img: "http://localhost:3000/image/girl.png",
+      username: "cookes",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcgeQ1A_rVILPdzmQpJpWV-t4HlVjJqpMdKDSrtf5iBtrw6ZOJjRuG4WMSgUDk6xEE25A&usqp=CAU",
     },
     {
       id: "8",
-      username: "ali aadr",
-      img: "http://localhost:3000/image/girl.png",
+      username: "pizza",
+      img: "https://www.eatthis.com/wp-content/uploads/sites/4/2019/06/deep-dish-pizza-chicago.jpg",
     },
     {
       id: "9",
-      username: "ali aadr",
-      img: "http://localhost:3000/image/girl.png",
-    },
-    {
-      id: "10",
-      username: "ali aadr",
-      img: "http://localhost:3000/image/girl.png",
-    },
-    {
-      id: "11",
-      username: "ali aadr",
-      img: "http://localhost:3000/image/girl.png",
-    },
-    {
-      id: "12",
-      username: "ali aadr",
-      img: "http://localhost:3000/image/girl.png",
-    },
-    {
-      id: "13",
-      username: "ali ahshsjjsjadr",
-      img: "http://localhost:3000/image/girl.png",
+      username: "sweet",
+      img: "https://www.efsa.europa.eu/sites/default/files/styles/share_opengraph/public/2021-03/experts_food_additives.jpg?h=827069f2&itok=Al_Mu6TK",
     },
   ];
   const scrollHundlle = () => {
@@ -106,7 +86,7 @@ export default function Profile() {
             <div className="flex justify-center ">
               {" "}
               <img
-                src="http://localhost:3000/image/girl.png"
+                src="http://localhost:3000/image/chra.jpg"
                 className=" h-28 w-28 sm:w-32  sm:h-32 md:w-40  md:h-40 sm:ml-10   bg-slate-500 rounded-full"
                 alt=""
               ></img>
@@ -127,7 +107,7 @@ export default function Profile() {
               </div>
               <div className="mt-6 justify-between flex w-80">
                 <span className="block text-lg  ">
-                  0 <p className="inline text-gray-500 ">posts</p>
+                  5 <p className="inline text-gray-500 ">posts</p>
                 </span>
                 <span className="block text-lg  ">
                   168 <p className="inline text-gray-500 ">followers</p>
@@ -138,7 +118,7 @@ export default function Profile() {
               </div>
               <div className="mt-7">
                 <p className="font-semibold text-black text-lg"> Chra O</p>
-                <p className=" text-gray-700 text-lg"> who paints sometimes</p>
+                <p className=" text-gray-700 text-lg"> cooking is my hobby</p>
               </div>
               <div className="text-blue-500 w-80 mt-2  ">
                 <p>#chra#food#word#fun#happy#quran#kurdistan</p>
@@ -154,11 +134,11 @@ export default function Profile() {
               >
                 {savedStory.map((story) => {
                   return (
-                    <div className=" shrink-0  " key={story.id}>
-                      <div className="bg-gray-50 rounded-full p-1 border border-gray-400 sm:w-14  sm:h-14 md:h-20 md:w-20 lg:h-24 lg:w-24 w-14 h-14 ">
+                    <div className="  " key={story.id}>
+                      <div className="bg-gray-50 rounded-full   shrink-0 p-1 border border-gray-400 sm:w-14  sm:h-14 md:h-20 md:w-20 lg:h-24 lg:w-24 w-14 h-14 ">
                         <img
                           src={story.img}
-                          className="rounded-full bg-slate-600     "
+                          className="rounded-full w-full h-full   "
                           alt=""
                         ></img>
                       </div>
@@ -202,7 +182,7 @@ export default function Profile() {
               </div>
             </div>
           </div>
-          <hr className="border-gray-300 mt-14 mr-4" />
+          <hr className="border-gray-300 mt-14 " />
           <div className="flex justify-center gap-10  text-sm text-gray-500 font-bold ">
             <button className="flex gap-2 border-gray-600 focus:border-t pt-4 focus:text-gray-700">
               {" "}
@@ -226,7 +206,7 @@ export default function Profile() {
               {" "}
               <img
                 src="http://localhost:3000/image/tag.png"
-                className="w-3 h-3 mt-1"
+                className="w-5 h-5 mt-1"
                 alt=""
               ></img>
               TAGGED
