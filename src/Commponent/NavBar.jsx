@@ -49,7 +49,7 @@ export default function NavBar(props) {
   }, []);
   return (
     <>
-      <div className="shadow-sm border-b bg-white w-full top-0 fixed">
+      <div className="shadow-sm border-b bg-white w-full top-0  fixed z-10">
         <div className=" flex justify-around sm:max-w-5xl max-w-2xl sm:mx-5 xl:mx-auto  sm:p-2 ">
           <h1 className=" relative Homelogo text-4xl mt-2 text-gray-700 ">
             <Link to="/home"> Food City</Link>
@@ -105,11 +105,11 @@ export default function NavBar(props) {
                   }}
                 ></img>
               </Link>
-              {showMassege && 
+              {showMassege && (
                 <span className="absolute top-3 right-1 bg-red-500  rounded-full  h-4 w-4  text-white  text-xs  items-center  justify-center flex leading-none">
                   3
                 </span>
-              }
+              )}
             </div>
 
             <img

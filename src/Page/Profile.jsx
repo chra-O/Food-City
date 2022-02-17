@@ -146,7 +146,7 @@ export default function Profile() {
             </div>
           </div>
           <div className=" ">
-            <div className="  ">
+            <div className=" relative  ">
               <div
                 ref={storeRef}
                 onScroll={scrollHundlle}
@@ -169,7 +169,7 @@ export default function Profile() {
                   );
                 })}
               </div>
-              <div className="  flex top-1 md:-left-[25px] sm:-left-0  -left-2  w-full h-full justify-between   items-center">
+              <div className=" absolute  flex -top-1 md:-left-[25px] sm:-left-0  -left-2  w-full h-full justify-between   items-center">
                 <button
                   onClick={() => {
                     storeRef.current.scrollLeft =
@@ -213,7 +213,7 @@ export default function Profile() {
               ></img>
               POSTS
             </button>
-            <button className="flex gap-2 border-gray-600 focus:border-t pt-4 focus:text-gray-700">
+            <button className=" flex gap-2 border-gray-600 focus:border-t pt-4 focus:text-gray-700">
               {" "}
               <img
                 src="http://localhost:3000/image/save.png"

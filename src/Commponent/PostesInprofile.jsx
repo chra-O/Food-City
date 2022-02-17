@@ -37,58 +37,61 @@ export default function PostesInprofile() {
       img: "http://localhost:3000/image/girl.png",
       like: 60,
       comment: 20,
-    },   {
-        id: 4,
-        img: "http://localhost:3000/image/girl.png",
-        like: 60,
-        comment: 20,
-      },
-      {
-        id: 5,
-        img: "http://localhost:3000/image/girl.png",
-        like: 60,
-        comment: 20,
-      },
-      {
-        id: 6,
-        img: "http://localhost:3000/image/girl.png",
-        like: 60,
-        comment: 20,
-      },   {
-        id: 4,
-        img: "http://localhost:3000/image/girl.png",
-        like: 60,
-        comment: 20,
-      },
-      {
-        id: 5,
-        img: "http://localhost:3000/image/girl.png",
-        like: 60,
-        comment: 20,
-      },
-      {
-        id: 6,
-        img: "http://localhost:3000/image/girl.png",
-        like: 60,
-        comment: 20,
-      },   {
-        id: 4,
-        img: "http://localhost:3000/image/girl.png",
-        like: 60,
-        comment: 20,
-      },
-      {
-        id: 5,
-        img: "http://localhost:3000/image/girl.png",
-        like: 60,
-        comment: 20,
-      },
-      {
-        id: 6,
-        img: "http://localhost:3000/image/girl.png",
-        like: 60,
-        comment: 20,
-      },
+    },
+    {
+      id: 4,
+      img: "http://localhost:3000/image/girl.png",
+      like: 60,
+      comment: 20,
+    },
+    {
+      id: 5,
+      img: "http://localhost:3000/image/girl.png",
+      like: 60,
+      comment: 20,
+    },
+    {
+      id: 6,
+      img: "http://localhost:3000/image/girl.png",
+      like: 60,
+      comment: 20,
+    },
+    {
+      id: 4,
+      img: "http://localhost:3000/image/girl.png",
+      like: 60,
+      comment: 20,
+    },
+    {
+      id: 5,
+      img: "http://localhost:3000/image/girl.png",
+      like: 60,
+      comment: 20,
+    },
+    {
+      id: 6,
+      img: "http://localhost:3000/image/girl.png",
+      like: 60,
+      comment: 20,
+    },
+    {
+      id: 4,
+      img: "http://localhost:3000/image/girl.png",
+      like: 60,
+      comment: 20,
+    },
+    {
+      id: 5,
+      img: "http://localhost:3000/image/girl.png",
+      like: 60,
+      comment: 20,
+    },
+    {
+      id: 6,
+      img: "http://localhost:3000/image/girl.png",
+      like: 60,
+      comment: 20,
+    },
   ];
   return (
     <>
@@ -96,12 +99,18 @@ export default function PostesInprofile() {
         {postes.map((post) => {
           return (
             <>
-              <div className="bg-slate-300 w-56 h-56">
-                <img
-                  src={post.img}
-                  alt=""
-                  className="object-cover w-56 h-56  "
-                ></img>
+              <div className="relative group cursor-pointer">
+                <div className="bg-slate-300 w-full h-64 justify-center flex items-center">
+                  <img
+                    src={post.img}
+                    alt=""
+                    className="object-cover w-56 h-56  "
+                  ></img>
+                </div>
+                <div className="absolute top-0 opacity-0 group-hover:opacity-100 left-1/2 -translate-x-1/2 w-full h-full bg-blashA flex text-white justify-center  items-center gap-1">
+                  <img src="http://localhost:3000/image/comment3.png" className="w-16 h-16 " alt=""></img>{post.comment}
+                  <img src="http://localhost:3000/image/like.png" className="w-10 h-10 mr-2 " alt=""></img> {post.like}
+                </div>
               </div>
             </>
           );
