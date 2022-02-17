@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import NavBar from "../Commponent/NavBar";
+import PostesInprofile from "../Commponent/PostesInprofile";
 
 export default function Profile() {
   const storeRef = useRef(null);
@@ -73,19 +74,18 @@ export default function Profile() {
     },
   ];
   const scrollHundlle = () => {
-    if (storeRef.current.scrollLeft>0) {
+    if (storeRef.current.scrollLeft > 0) {
       setleft(true);
-      
     } else {
       setleft(false);
- 
     }
-    if (storeRef.current.scrollLeft === storeRef.current.scrollWidth - storeRef.current.clientWidth) {
+    if (
+      storeRef.current.scrollLeft ===
+      storeRef.current.scrollWidth - storeRef.current.clientWidth
+    ) {
       setRight(false);
-      
     } else {
       setRight(true);
- 
     }
   };
   return (
@@ -98,9 +98,9 @@ export default function Profile() {
         not="http://localhost:3000/image/heart1.png"
       />
       {/* ///////////////////////////// */}
-      <div className="pt-16 bg-gray-50  h-screen">
+      <div className="  pt-16 bg-gray-50 ">
         {" "}
-        <div className="sm:max-w-6xl sm:mx-5 p-10 xl:mx-auto">
+        <div className="sm:max-w-6xl  sm:mx-5 p-10 xl:mx-auto">
           {" "}
           <div className="grid grid-cols-4 gap-4">
             <div className="flex justify-center ">
@@ -140,11 +140,13 @@ export default function Profile() {
                 <p className="font-semibold text-black text-lg"> Chra O</p>
                 <p className=" text-gray-700 text-lg"> who paints sometimes</p>
               </div>
-              <div className="text-blue-500 w-80 mt-2  "><p>#chra#food#word#fun#happy#quran#kurdistan</p></div>
+              <div className="text-blue-500 w-80 mt-2  ">
+                <p>#chra#food#word#fun#happy#quran#kurdistan</p>
+              </div>
             </div>
           </div>
-          <div className="">
-            <div className="relative ">
+          <div className=" ">
+            <div className="  ">
               <div
                 ref={storeRef}
                 onScroll={scrollHundlle}
@@ -167,28 +169,70 @@ export default function Profile() {
                   );
                 })}
               </div>
-              <div className=" absolute flex -top-2 md:-left-[25px] sm:-left-0  -left-2 z-10 w-full h-full justify-between   items-center">
-                <button onClick={()=>{storeRef.current.scrollLeft=storeRef.current.scrollLeft-300}}>
+              <div className="  flex top-1 md:-left-[25px] sm:-left-0  -left-2  w-full h-full justify-between   items-center">
+                <button
+                  onClick={() => {
+                    storeRef.current.scrollLeft =
+                      storeRef.current.scrollLeft - 300;
+                  }}
+                >
                   <img
                     src="http://localhost:3000/image/left.png"
-                    className={`  inline  w-6 h-6   bg-white rounded-full opacity-50  cursor-pointer drop-shadow-lg  filter ${
+                    className={`    w-6 h-6 bg-white   cursor-pointer rounded-full  ${
                       left ? `visible` : `invisible`
-                    } `}
+                    }
+                     `}
                     alt=""
                   ></img>
                 </button>
-                <button onClick={()=>{storeRef.current.scrollLeft=storeRef.current.scrollLeft+300}}>
-                <img
-                  src="http://localhost:3000/image/right.png"
-                  className={`inline w-6 h-6 bg-white rounded-full opacity-50 cursor-pointer drop-shadow-lg filter ${
-                    right ? `visible` : `invisible`
-                  }`}
-                  alt=""
-                ></img>
+                <button
+                  onClick={() => {
+                    storeRef.current.scrollLeft =
+                      storeRef.current.scrollLeft + 300;
+                  }}
+                >
+                  <img
+                    src="http://localhost:3000/image/right.png"
+                    className={` w-6 h-6 bg-white   cursor-pointer rounded-full  ${
+                      right ? `visible` : `invisible`
+                    }`}
+                    alt=""
+                  ></img>
                 </button>
               </div>
             </div>
           </div>
+          <hr className="border-gray-300 mt-14 mr-4" />
+          <div className="flex justify-center gap-10  text-sm text-gray-500 font-bold ">
+            <button className="flex gap-2 border-gray-600 focus:border-t pt-4 focus:text-gray-700">
+              {" "}
+              <img
+                src="http://localhost:3000/image/postes.png"
+                className="w-3 h-3 mt-1"
+                alt=""
+              ></img>
+              POSTS
+            </button>
+            <button className="flex gap-2 border-gray-600 focus:border-t pt-4 focus:text-gray-700">
+              {" "}
+              <img
+                src="http://localhost:3000/image/save.png"
+                className="w-3 h-3 mt-1"
+                alt=""
+              ></img>
+              SAVED
+            </button>
+            <button className="flex gap-2 border-gray-600 focus:border-t pt-4 focus:text-gray-700">
+              {" "}
+              <img
+                src="http://localhost:3000/image/tag.png"
+                className="w-3 h-3 mt-1"
+                alt=""
+              ></img>
+              TAGGED
+            </button>
+          </div>
+          <PostesInprofile />
         </div>
       </div>
     </>
