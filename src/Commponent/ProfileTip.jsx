@@ -17,22 +17,26 @@ export default function ProfileTip() {
               Profile
             </p>{" "}
           </Link>
-          <p className="m-3 cursor-pointer ">
-            <img
-              src="http://localhost:3000/image/save.png"
-              className="h-4 w-4 mr-3 inline  "
-              alt=""
-            ></img>
-            Save
-          </p>
-          <p className="m-3 cursor-pointer ">
-            <img
-              src="http://localhost:3000/image/setting.png"
-              className="h-4 w-4 mr-3 inline  "
-              alt=""
-            ></img>
-            Setting
-          </p>
+          <Link to="/allsavedpost">
+            <p className="m-3 cursor-pointer ">
+              <img
+                src="http://localhost:3000/image/save.png"
+                className="h-4 w-4 mr-3 inline  "
+                alt=""
+              ></img>
+              Save
+            </p>
+          </Link>
+          <Link to="/setting">
+            <p className="m-3 cursor-pointer ">
+              <img
+                src="http://localhost:3000/image/setting.png"
+                className="h-4 w-4 mr-3 inline  "
+                alt=""
+              ></img>
+              Setting
+            </p>
+          </Link>
           <p className="m-3 cursor-pointer ">
             <img
               src="http://localhost:3000/image/sewitch.png"

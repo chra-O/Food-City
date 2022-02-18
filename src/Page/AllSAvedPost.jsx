@@ -1,5 +1,6 @@
 import React from "react";
-
+import NavBar from "../Commponent/NavBar";
+import { Link } from "react-router-dom";
 export default function AllSAvedPost() {
   const postes = [
     {
@@ -22,45 +23,59 @@ export default function AllSAvedPost() {
     },
   ];
   return (
-   
+    <>
+      <NavBar
+        home="http://localhost:3000/image/home1.png"
+        messanger="http://localhost:3000/image/messanger1.png"
+        add="http://localhost:3000/image/add1.png"
+        compasss="http://localhost:3000/image/compass1.png"
+        not="http://localhost:3000/image/heart1.png"
+      />
       <div className=" h-screen pt-16 bg-gray-50 ">
         {" "}
         <div className="sm:max-w-6xl  sm:mx-5 p-10 xl:mx-auto">
           {" "}
-          <div className="flex justify-center "></div>{" "}
-          <div className="grid grid-cols-3 gap-5  mt-10">
-        {postes.map((post) => {
-          return (
-            <>
-              <div className="relative group cursor-pointer" key={post.id}>
-                <div className="bg-slate-300 w-full h-32 sm:h-52 md:h-56 lg:h-64 justify-center flex items-center">
-                  <img
-                    src={post.img}
-                    alt=""
-                    className="object-cover h-32 sm:h-52 md:h-56 lg:h-64  "
-                  ></img>
-                </div>
-                <div className="absolute top-0 opacity-0 group-hover:opacity-100 left-1/2 -translate-x-1/2 w-full h-full bg-blashA flex text-white justify-center  items-center gap-1">
-                  <img
-                    src="http://localhost:3000/image/comment3.png"
-                    className="lg:w-16 lg:h-16  h-10 w-10"
-                    alt=""
-                  ></img>
-                  {post.comment}
-                  <img
-                    src="http://localhost:3000/image/like.png"
-                    className="lg:w-14 lg:h-14  h-6 w-6 "
-                    alt=""
-                  ></img>{" "}
-                  {post.like}
-                </div>
-              </div>
-            </>
-          );
-        })}
+        
+          <Link to="/Profile">
+            <div className="flex"><img src="http://localhost:3000/image/leftsaved.png" className="  w-7 h-7" alt=""></img>
+            <p className="text-lg text-gray-700  "> Profile</p></div>
+            
+          </Link>{" "}
+          <p className="text-xl mt-5  font-semibold">All Saved</p>
+          <div className="grid grid-cols-3 gap-5  mt-2 ">
+            {postes.map((post) => {
+              return (
+                <>
+                  <div className="relative group cursor-pointer" key={post.id}>
+                    <div className="bg-slate-300 w-full h-32 sm:h-52 md:h-56 lg:h-72 justify-center flex items-center">
+                      <img
+                        src={post.img}
+                        alt=""
+                        className="object-cover h-32 sm:h-52 md:h-56 lg:h-72  "
+                      ></img>
+                    </div>
+                    <div className="absolute top-0 opacity-0 group-hover:opacity-100 left-1/2 -translate-x-1/2 w-full h-full bg-blashA flex text-white justify-center  items-center gap-1">
+                      <img
+                        src="http://localhost:3000/image/comment3.png"
+                        className="lg:w-16 lg:h-16  h-10 w-10"
+                        alt=""
+                      ></img>
+                      {post.comment}
+                      <img
+                        src="http://localhost:3000/image/like.png"
+                        className="lg:w-14 lg:h-14  h-6 w-6 "
+                        alt=""
+                      ></img>{" "}
+                      {post.like}
+                    </div>
+                  </div>
+                </>
+              );
+            })}
+          </div>
+        </div>
+        <div></div>
       </div>
-      </div>
-      <div></div>
-    </div>
+    </>
   );
 }

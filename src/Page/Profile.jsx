@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import NavBar from "../Commponent/NavBar";
 import PostesInprofile from "../Commponent/PostesInprofile";
 import Saved from "../Commponent/Saved";
@@ -117,9 +118,11 @@ export default function Profile() {
                 <span className="text-gray-800 text-3xl  font-thin ">
                   chra othman{" "}
                 </span>
-                <div className="cursor-pointer  inline text-gray-900 ml-2 font-semibold p-1 px-2   border border-gray-300  rounded  ">
-                  Edit Profile
-                </div>
+                <Link to="/setting">
+                  <div className="cursor-pointer  inline text-gray-900 ml-2 font-semibold p-1 px-2   border border-gray-300  rounded  ">
+                    Edit Profile
+                  </div>
+                </Link>
                 <img
                   src="http://localhost:3000/image/setting.png"
                   className="h-6  w-6 ml-4  inline "
