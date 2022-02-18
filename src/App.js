@@ -7,11 +7,11 @@ import Home from "./Page/Home";
 import Messanger from "./Page/Messanger";
 import Notification from "./Page/Notification";
 import Profile from "./Page/Profile";
+import AllSAvedPost from "./Page/AllSAvedPost";
 
 function App() {
   return (
     <>
-
       <Routes>
         <Route path="/" element={<LogInPage />} />
         <Route path="/Messanger" element={<Messanger />} />
@@ -19,6 +19,7 @@ function App() {
         <Route path="/Notification" element={<Notification />} />
         <Route path="/home" element={<Home />} />
         <Route path="/ForgetPassword" element={<ForgetPassword />} />
+        <Route path="/allsavedpost" element={<AllSAvedPost />} />
         <Route path="/signup" element={<SignUpPage />} />
       </Routes>
     </>

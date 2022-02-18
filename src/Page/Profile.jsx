@@ -1,11 +1,17 @@
 import React, { useRef, useState } from "react";
 import NavBar from "../Commponent/NavBar";
 import PostesInprofile from "../Commponent/PostesInprofile";
+import Saved from "../Commponent/Saved";
+import Tag from "../Commponent/Tag";
 
 export default function Profile() {
   const storeRef = useRef(null);
   const [left, setleft] = useState(false);
   const [right, setRight] = useState(true);
+  const [post, setPost] = useState(true);
+  const [saved, setsaved] = useState(false);
+  const [tag, settag] = useState(false);
+
   const savedStory = [
     {
       id: "1",
@@ -67,6 +73,21 @@ export default function Profile() {
     } else {
       setRight(true);
     }
+  };
+  const postClick = () => {
+    setPost(true);
+    setsaved(false);
+    settag(false);
+  };
+  const tagClick = () => {
+    setPost(false);
+    setsaved(false);
+    settag(true);
+  };
+  const saveClick = () => {
+    setPost(false);
+    setsaved(true);
+    settag(false);
   };
   return (
     <>
@@ -184,7 +205,14 @@ export default function Profile() {
           </div>
           <hr className="border-gray-300 mt-14 " />
           <div className="flex justify-center gap-10  text-sm text-gray-500 font-bold ">
-            <button className="flex gap-2 border-gray-600 focus:border-t pt-4 focus:text-gray-700">
+            <button
+              onClick={() => {
+                postClick();
+              }}
+              className={`flex gap-2 border-gray-600 ${
+                post ? `border-t` : ``
+              } pt-4 focus:text-gray-700`}
+            >
               {" "}
               <img
                 src="http://localhost:3000/image/postes.png"
@@ -193,7 +221,14 @@ export default function Profile() {
               ></img>
               POSTS
             </button>
-            <button className=" flex gap-2 border-gray-600 focus:border-t pt-4 focus:text-gray-700">
+            <button
+              onClick={() => {
+                saveClick();
+              }}
+              className={`flex gap-2 border-gray-600 ${
+                saved ? `border-t` : ``
+              } pt-4 focus:text-gray-700`}
+            >
               {" "}
               <img
                 src="http://localhost:3000/image/save.png"
@@ -202,7 +237,14 @@ export default function Profile() {
               ></img>
               SAVED
             </button>
-            <button className="flex gap-2 border-gray-600 focus:border-t pt-4 focus:text-gray-700">
+            <button
+              onClick={() => {
+                tagClick();
+              }}
+              className={`flex gap-2 border-gray-600 ${
+                tag ? `border-t` : ``
+              } pt-4 focus:text-gray-700`}
+            >
               {" "}
               <img
                 src="http://localhost:3000/image/tag.png"
@@ -212,7 +254,9 @@ export default function Profile() {
               TAGGED
             </button>
           </div>
-          <PostesInprofile />
+          {post && <PostesInprofile />}
+          {tag && <Tag />}
+          {saved && <Saved />}
         </div>
       </div>
     </>

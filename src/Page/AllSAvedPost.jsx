@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PostesInprofile() {
+export default function AllSAvedPost() {
   const postes = [
     {
       id: 1,
@@ -20,22 +20,15 @@ export default function PostesInprofile() {
       like: 6,
       comment: 10,
     },
-    {
-      id: 4,
-      img: "https://img.onmanorama.com/content/dam/mm/en/food/features/images/2021/10/17/pizza.jpg",
-      like: 92,
-      comment: 52,
-    },
-    {
-      id: 5,
-      img: "https://www.seriouseats.com/thmb/SKxgUYK2iGAdLXiPDEpvGpbRFjA=/1500x1125/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2020__08__20200811-yogurt-fruit-popsicles-group-vicky-wasik-1-3-e441234f879f4719a6a30e7064e9a62f.jpg",
-      like: 71,
-      comment: 0,
-    },
   ];
   return (
-    <>
-      <div className="grid grid-cols-3 gap-5  mt-10">
+   
+      <div className=" h-screen pt-16 bg-gray-50 ">
+        {" "}
+        <div className="sm:max-w-6xl  sm:mx-5 p-10 xl:mx-auto">
+          {" "}
+          <div className="flex justify-center "></div>{" "}
+          <div className="grid grid-cols-3 gap-5  mt-10">
         {postes.map((post) => {
           return (
             <>
@@ -50,13 +43,13 @@ export default function PostesInprofile() {
                 <div className="absolute top-0 opacity-0 group-hover:opacity-100 left-1/2 -translate-x-1/2 w-full h-full bg-blashA flex text-white justify-center  items-center gap-1">
                   <img
                     src="http://localhost:3000/image/comment3.png"
-                    className="lg:w-16 lg:h-16  h-10 w-10 "
+                    className="lg:w-16 lg:h-16  h-10 w-10"
                     alt=""
                   ></img>
                   {post.comment}
                   <img
                     src="http://localhost:3000/image/like.png"
-                    className="lg:w-14 lg:h-14  h-6 w-6"
+                    className="lg:w-14 lg:h-14  h-6 w-6 "
                     alt=""
                   ></img>{" "}
                   {post.like}
@@ -66,6 +59,8 @@ export default function PostesInprofile() {
           );
         })}
       </div>
-    </>
+      </div>
+      <div></div>
+    </div>
   );
 }
