@@ -15,7 +15,57 @@ export default function EiditProfile() {
         {" "}
         <div className="sm:max-w-4xl  sm:mx-5  xl:mx-auto mt-12 bg-white border border-solid border-gray-300">
           <div className="grid grid-cols-3">
-            <div className="  border-r-2 h-full "></div>
+            <div className="  border-r-2 h-full ">
+              <div className="flex justify-center  w-full">
+                <div className="grid grid-cols-1">
+                  <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
+                    <p className="w-80 items-center ml-10 font-semibold text-lg ">
+                      Eidt Profile
+                    </p>
+                  </div>
+                  <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
+                    <p className="w-80 items-center ml-10 font-semibold text-lg  ">
+                      Change Password
+                    </p>
+                  </div>{" "}
+                  <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
+                    <p className="w-80 items-center ml-10 font-semibold text-lg ">
+                      Apps and Websites
+                    </p>
+                  </div>{" "}
+                  <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
+                    <p className="w-80 items-center ml-10 font-semibold text-lg ">
+                      Email and SMS
+                    </p>
+                  </div>{" "}
+                  <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
+                    <p className="w-80 items-center ml-10 font-semibold text-lg ">
+                      Push Notifications
+                    </p>
+                  </div>
+                  <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
+                    <p className="w-80 items-center ml-10 font-semibold text-lg ">
+                      Privacy and Security
+                    </p>
+                  </div>{" "}
+                  <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
+                    <p className="w-80 items-center ml-10 font-semibold text-lg ">
+                      Login Activity
+                    </p>
+                  </div>
+                  <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
+                    <p className="w-80 items-center ml-10 font-semibold text-lg ">
+                      Emails from Instagram
+                    </p>
+                  </div>
+                  <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
+                    <p className="w-80 items-center ml-10 font-semibold text-lg ">
+                      Help
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="  col-span-2 h-full  p-10">
               <div className="flex justify-center items-center">
                 <div className="flex w-full ml-7">
