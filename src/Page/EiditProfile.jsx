@@ -19,47 +19,47 @@ export default function EiditProfile() {
               <div className="flex justify-center  w-full">
                 <div className="grid grid-cols-1">
                   <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
-                    <p className="w-80 items-center ml-10 font-semibold text-lg ">
+                    <p className="w-80 items-center ml-10 font-semibold sm:text-lg text-sm ">
                       Eidt Profile
                     </p>
                   </div>
                   <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
-                    <p className="w-80 items-center ml-10 font-semibold text-lg  ">
+                    <p className="w-80 items-center sm:ml-10 ml-5 font-semibold sm:text-lg text-sm  ">
                       Change Password
                     </p>
                   </div>{" "}
                   <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
-                    <p className="w-80 items-center ml-10 font-semibold text-lg ">
+                    <p className="w-80 items-center sm:ml-10 ml-5 font-semibold sm:text-lg text-sm ">
                       Apps and Websites
                     </p>
                   </div>{" "}
                   <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
-                    <p className="w-80 items-center ml-10 font-semibold text-lg ">
+                    <p className="w-80 items-center sm:ml-10 ml-5 font-semibold sm:text-lg text-sm ">
                       Email and SMS
                     </p>
                   </div>{" "}
                   <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
-                    <p className="w-80 items-center ml-10 font-semibold text-lg ">
+                    <p className="w-80 items-center sm:ml-10 ml-5 font-semibold sm:text-lg text-sm ">
                       Push Notifications
                     </p>
                   </div>
                   <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
-                    <p className="w-80 items-center ml-10 font-semibold text-lg ">
+                    <p className="w-80 items-center sm:ml-10 ml-5 font-semibold sm:text-lg text-sm ">
                       Privacy and Security
                     </p>
                   </div>{" "}
                   <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
-                    <p className="w-80 items-center ml-10 font-semibold text-lg ">
+                    <p className="w-80 items-center sm:ml-10 ml-5 font-semibold sm:text-lg text-sm ">
                       Login Activity
                     </p>
                   </div>
                   <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
-                    <p className="w-80 items-center ml-10 font-semibold text-lg ">
+                    <p className="w-80 items-center sm:ml-10 ml-5 font-semibold sm:text-lg text-sm ">
                       Emails from Instagram
                     </p>
                   </div>
                   <div className="  flex items-center  h-20  w-full hover:bg-slate-50 hover:border-l-4">
-                    <p className="w-80 items-center ml-10 font-semibold text-lg ">
+                    <p className="w-80 items-center sm:ml-10 ml-5 font-semibold sm:text-lg text-sm ">
                       Help
                     </p>
                   </div>

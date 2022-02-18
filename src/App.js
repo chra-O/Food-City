@@ -9,6 +9,7 @@ import Notification from "./Page/Notification";
 import Profile from "./Page/Profile";
 import AllSAvedPost from "./Page/AllSAvedPost";
 import EiditProfile from "./Page/EiditProfile";
+import Follower from "./Page/Follower";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/allsavedpost" element={<AllSAvedPost />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/setting" element={<EiditProfile />} />
+        <Route path="/follower" element={<Follower />} />
       </Routes>
     </>
   );
