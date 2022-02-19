@@ -73,13 +73,15 @@ export default function LogInPage() {
                     {showPassword ? "Hide" : "Show"}
                   </button>
                 </div>
-                <button
-                  className={` ${
-                    hasfild ? "bg-gray-900" : "bg-gray-700"
-                  } w-full mt-2 h-8 rounded text-white  text-sm font-medium py-1`}
-                >
-                  <Link to="/home"> Log In</Link>
-                </button>
+                <Link to="/home">
+                  <button
+                    className={` ${
+                      hasfild ? "bg-gray-900" : "bg-gray-700"
+                    } w-full mt-2 h-8 rounded text-white  text-sm font-medium py-1`}
+                  >
+                    Log In
+                  </button>
+                </Link>
               </form>{" "}
               <div className=" flex space-x-2 w-64 mt-4 items-center">
                 <span className="bg-gray-300 h-px  flex-1" />

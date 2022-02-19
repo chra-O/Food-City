@@ -10,6 +10,7 @@ import Profile from "./Page/Profile";
 import AllSAvedPost from "./Page/AllSAvedPost";
 import EiditProfile from "./Page/EiditProfile";
 import Follower from "./Page/Follower";
+import ShowMassage from "./Page/ShowMassage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/setting" element={<EiditProfile />} />
         <Route path="/follower" element={<Follower />} />
+        <Route path="/showMassage" element={<ShowMassage />} />
       </Routes>
     </>
   );

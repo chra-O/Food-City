@@ -16,13 +16,14 @@ export default function Follower() {
         {" "}
         <div className="sm:max-w-2xl  sm:mx-5  xl:mx-auto mt-12 bg-white border border-solid border-gray-300">
           <Link to="/Notification">
-              <div className="flex mt-4 text-gray-600 text-lg ml-4 h-16 items-center border-b-2"><img
-              src="http://localhost:3000/image/leftsaved.png"
-              className=" h-8 w-8 "
-              alt=""
-            ></img>
-            <p>Notification</p></div>
-            
+            <div className="flex mt-4 text-gray-600 text-lg ml-4 h-16 items-center border-b-2">
+              <img
+                src="http://localhost:3000/image/leftsaved.png"
+                className=" h-8 w-8 "
+                alt=""
+              ></img>
+              <p>Notification</p>
+            </div>
           </Link>
           <div className="grid grid-cols-1 ">
             {" "}
