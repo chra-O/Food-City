@@ -14,7 +14,7 @@ export default function Follower() {
       />
       <div className="  pt-16 bg-gray-50  h-fit pb-40 ">
         {" "}
-        <div className="sm:max-w-2xl  sm:mx-5  xl:mx-auto mt-12 bg-white border border-solid border-gray-300">
+        <div className="sm:max-w-2xl  sm:mx-5  xl:mx-auto mt-12 bg-white border border-solid border-gray-300 rounded-md">
           <Link to="/Notification">
             <div className="flex mt-4 text-gray-600 text-lg ml-4 h-16 items-center border-b-2">
               <img

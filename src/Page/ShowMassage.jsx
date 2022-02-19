@@ -27,17 +27,31 @@ export default function ShowMassage() {
               </div>
             </Link>
           </div>{" "}
-          <div className="sm:max-w-xl  sm:mx-5 xl:mx-auto mt-4  bg-white border border-solid border-gray-300">
-            <div className="grid grid-cols-1 ">
+          <div className="sm:max-w-xl  sm:mx-5 xl:mx-auto mt-4  bg-white border border-solid border-gray-300 rounded-md">
+            <div className="grid grid-cols-1  ">
               <div className="w-full border-b-2 h-16 flex items-center ">
                 <img
                   src="http://localhost:3000/image/chra.jpg"
                   className=" h-8 w-8  ml-10  rounded-full"
                   alt=""
                 ></img>
-                <p className="ml-2">chra O</p>
+                <p className="ml-2 ">chra O</p>
               </div>
-              <div className="overflow-y-scroll h-[550px] "></div>
+              <div className="overflow-y-scroll h-[550px] grid grid-cols-1 gap-2  "></div>
+              
+              <div className=" m-2 relative">
+                {" "}
+                <img
+                  src="http://localhost:3000/image/face.png"
+                  className="h-7 w-7  text-gray-200  absolute mt-3 ml-4 mr-6"
+                  alt=""
+                ></img>
+                <input
+                  type="text"
+                  className="w-full p-3 rounded-full border-2 pl-12   "
+                  placeholder="Message ..."
+                ></input>
+              </div>
             </div>
           </div>{" "}
         </div>
