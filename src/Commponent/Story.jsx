@@ -97,7 +97,7 @@ export default function Story() {
               );
             })}
           </div>
-          <div className=" absolute  flex -top-1 md:-left-[25px] sm:-left-0  -left-2  w-full h-full justify-between   items-center">
+          <div className=" absolute  flex -top-1  -left-1  w-full h-full justify-between   items-center">
             <button
               onClick={() => {
                 storeRef.current.scrollLeft = storeRef.current.scrollLeft - 300;
