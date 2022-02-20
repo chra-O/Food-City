@@ -50,6 +50,15 @@ export default function Story() {
       id: "9",
       username: "sweet",
       img: "https://www.efsa.europa.eu/sites/default/files/styles/share_opengraph/public/2021-03/experts_food_additives.jpg?h=827069f2&itok=Al_Mu6TK",
+    }, {
+      id: "10",
+      username: "sweet",
+      img: "https://www.efsa.europa.eu/sites/default/files/styles/share_opengraph/public/2021-03/experts_food_additives.jpg?h=827069f2&itok=Al_Mu6TK",
+    },
+    {
+      id: "11",
+      username: "sweet",
+      img: "https://www.efsa.europa.eu/sites/default/files/styles/share_opengraph/public/2021-03/experts_food_additives.jpg?h=827069f2&itok=Al_Mu6TK",
     },
   ];
   const scrollHundlle = () => {
@@ -62,7 +71,7 @@ export default function Story() {
       storeRef.current.scrollLeft ===
       storeRef.current.scrollWidth -
         storeRef.current.clientWidth +
-        0.44444274902344
+        0.11111450195312
     ) {
       setRight(false);
     } else {
@@ -83,7 +92,7 @@ export default function Story() {
             {savedStory.map((story) => {
               return (
                 <div className="  " key={story.id}>
-                  <div className="bg-gray-50 rounded-full   shrink-0 p-1 border border-yellow-400  w-16 h-16 ">
+                  <div className="bg-gray-50 rounded-full   shrink-0 p-1 border border-yellow-500  w-16 h-16 ">
                     <img
                       src={story.img}
                       className="rounded-full w-full h-full   "

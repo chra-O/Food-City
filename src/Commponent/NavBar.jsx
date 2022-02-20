@@ -68,7 +68,7 @@ export default function NavBar(props) {
             <input
               type="text"
               placeholder="search"
-              className=" inputNavbar  p-1 bg-gray-100  block  focus:outline-none"
+              className=" inputNavbar   p-1 bg-gray-100  block  focus:outline-none"
             ></input>
             {corss && (
               <img
