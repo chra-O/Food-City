@@ -74,6 +74,9 @@ export default function Home() {
                 </div>
                 <p className="text-blue-500 ml-24 mt-2 text-sm">Follow</p>
               </div>
+              <div className="text-gray-400 w-80 mt-10 text-sm">
+               help .contact  .jop  .Api .Acount 
+              </div>
             </div>
           </section>
         </div>
