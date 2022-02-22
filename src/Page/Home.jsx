@@ -20,9 +20,61 @@ export default function Home() {
             <Story /> <Post />
             <Post /> <Post />
           </section>
-          <section className="bg-blue-600 invisible xl:visible">
-            {" "}
-            profile
+          <section>
+            <div className=" mt-3 fixed ml-8   invisible xl:visible">
+              <div className="flex">
+                <img
+                  src="http://localhost:3000/image/chra.jpg"
+                  className=" h-16 w-16      rounded-full"
+                  alt=""
+                ></img>
+                <div className=" mt-2 ml-4 flex-1">
+                  <p>Chra Othman</p>
+                  <p className="text-gray-400">chra.othan.a</p>
+                </div>
+                <p className="text-blue-500 ml-24 mt-5 text-sm">switch</p>
+              </div>
+              <div className="flex mt-10">
+                <p className="text-gray-400 flex-1">Suggestions For You</p>
+                <p>See all</p>
+              </div>
+              <div className="flex mt-2">
+                <img
+                  src="http://localhost:3000/image/chra.jpg"
+                  className=" h-10 w-10      rounded-full"
+                  alt=""
+                ></img>
+                <div className="  ml-4 flex-1">
+                  <p>Chra Othman</p>
+                  <p className="text-gray-500 text-sm">chra.othan.a</p>
+                </div>
+                <p className="text-blue-500 ml-24 mt-2 text-sm">Follow</p>
+              </div>
+              <div className="flex mt-2">
+                <img
+                  src="http://localhost:3000/image/chra.jpg"
+                  className=" h-10 w-10      rounded-full"
+                  alt=""
+                ></img>
+                <div className="  ml-4 flex-1">
+                  <p>Chra Othman</p>
+                  <p className="text-gray-500 text-sm">chra.othan.a</p>
+                </div>
+                <p className="text-blue-500 ml-24 mt-2 text-sm">Follow</p>
+              </div>
+              <div className="flex mt-2">
+                <img
+                  src="http://localhost:3000/image/chra.jpg"
+                  className=" h-10 w-10      rounded-full"
+                  alt=""
+                ></img>
+                <div className="  ml-4 flex-1">
+                  <p>Chra Othman</p>
+                  <p className="text-gray-500 text-sm">chra.othan.a</p>
+                </div>
+                <p className="text-blue-500 ml-24 mt-2 text-sm">Follow</p>
+              </div>
+            </div>
           </section>
         </div>
       </div>
