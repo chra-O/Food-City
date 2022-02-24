@@ -24,7 +24,7 @@ export default function Home() {
             <div className=" mt-6 fixed ml-8   invisible xl:visible">
               <div className="flex">
                 <img
-                  src="http://localhost:3000/image/chra.jpg"
+                  src="./Image/chra.jpg"
                   className=" h-16 w-16      rounded-full"
                   alt=""
                 ></img>
