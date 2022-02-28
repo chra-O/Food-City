@@ -5,7 +5,6 @@ import Story from "../Commponent/Story";
 import "../Style/tip.css";
 
 export default function Home() {
-  const [follow, setfollow] = useState(false);
   const user = [
     {
       img: "https://static.remove.bg/remove-bg-web/a72f919da581145bc8a52ac0c5d21f5c4741f367/assets/start-0e837dcc57769db2306d8d659f53555feb500b3c5d456879b9c843d1872e7baa.jpg",
@@ -40,8 +39,9 @@ export default function Home() {
       <div className="pt-20 bg-slate-50">
         <div className="grid mt-10 grid-cols-1 md:grid-cols-2 md:max-w-3xl xl:grid-cols-3 xl:max-w-4xl mx-auto gap-2">
           <section className="col-span-2 ">
-            <Story /> <Post />
-            <Post /> <Post />
+            <Story />
+            <Post />
+           
           </section>
           <section>
             <div className=" mt-6 fixed ml-8   invisible xl:visible">
@@ -72,10 +72,12 @@ export default function Home() {
                       ></img>
                       <div className="  ml-4 flex-1">
                         <p>{e.name}</p>
-                        <p className="text-gray-500 text-sm hover:underline hover:cursor-pointer">{e.username}</p>
+                        <p className="text-gray-500 text-sm hover:underline hover:cursor-pointer">
+                          {e.username}
+                        </p>
                       </div>
                       <p className="text-blue-500 ml-24 mt-4 text-sm cursor-pointer">
-                        Follow
+                        follow
                       </p>
                     </div>
                   </>
