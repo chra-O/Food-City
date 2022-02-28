@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { isShowNotification } from "../Redux/slice";
 import { isShowmessanger } from "../Redux/slice";
 import { useSelector } from "react-redux";
+
 export default function NavBar(props) {
   const [search, setSearch] = useState(true);
   const [corss, setcross] = useState(false);
@@ -68,7 +69,7 @@ export default function NavBar(props) {
             <input
               type="text"
               placeholder="search"
-              className=" inputNavbar   p-1 bg-gray-100  block  focus:outline-none"
+              className=" inputNavbar   p-1 bg-gray-100  block   outline-gray-100 "
             ></input>
             {corss && (
               <img
@@ -143,7 +144,7 @@ export default function NavBar(props) {
             <div className="relative " ref={profileRef}>
               {" "}
               <img
-                src="http://localhost:3000/image/girl.png"
+                src="./Image/chra.jpg"
                 className="h-10 w-10 mt-2 m-3 text-gray-400 inline cursor-pointer bg-slate-500 rounded-full"
                 alt=""
                 onClick={() => {

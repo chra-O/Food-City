@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import NavBar from "../Commponent/NavBar";
 import Post from "../Commponent/Post";
 import Story from "../Commponent/Story";
@@ -46,6 +47,8 @@ export default function Home() {
           <section>
             <div className=" mt-6 fixed ml-8   invisible xl:visible">
               <div className="flex">
+                <Link to="/Profile">
+                  <div className="flex">
                 <img
                   src="./Image/chra.jpg"
                   className=" h-16 w-16      rounded-full"
@@ -54,7 +57,7 @@ export default function Home() {
                 <div className=" mt-4 ml-4 flex-1">
                   <p>Chra Othman</p>
                   <p className="text-gray-400">chra.othan.a</p>
-                </div>
+                </div></div></Link>
                 <p className="text-blue-500 ml-24 mt-5 text-sm">switch</p>
               </div>
               <div className="flex mt-10">
