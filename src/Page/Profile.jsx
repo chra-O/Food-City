@@ -1,4 +1,4 @@
-import React, { useRef, useState ,useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../Commponent/NavBar";
 import PostesInprofile from "../Commponent/PostesInprofile";
@@ -7,7 +7,7 @@ import Tag from "../Commponent/Tag";
 import SettingModel from "../Model/SettingModel";
 
 export default function Profile() {
-  const profileRef = useRef(null);
+  const refModel = useRef(null);
   const storeRef = useRef(null);
   const [left, setleft] = useState(false);
   const [right, setRight] = useState(true);
@@ -15,19 +15,7 @@ export default function Profile() {
   const [saved, setsaved] = useState(false);
   const [tag, settag] = useState(false);
   const [setting, setsetting] = useState(false);
- useEffect(() => {
-      const profileClick = (e) => {
-        if (!profileRef?.current?.contains(e.target)) {
-          setsetting(true);
-        } else {
-          setsetting(false);
-        }
-      };
-      document.addEventListener("mousedown", profileClick);
-      return () => {
-        document.removeEventListener("mousedown", profileClick);
-      };
-    }, []);
+
   const savedStory = [
     {
       id: "1",
@@ -105,9 +93,22 @@ export default function Profile() {
     setsaved(true);
     settag(false);
   };
+  useEffect(() => {
+    const setinglick = (e) => {
+      if (!refModel?.current?.contains(e.target)) {
+        setsetting(false);
+      } else {
+        setsetting(true);
+      }
+    };
+    document.addEventListener("mousedown", setinglick);
+    return () => {
+      document.removeEventListener("mousedown", setinglick);
+    };
+  }, []);
   return (
     <>
-      <div className="   " >
+      <div className="   ">
         <NavBar
           home="http://localhost:3000/image/home1.png"
           messanger="http://localhost:3000/image/messanger1.png"
@@ -116,7 +117,7 @@ export default function Profile() {
           not="http://localhost:3000/image/heart1.png"
         />
         {/* ///////////////////////////// */}
-        <div className="  pt-16 bg-gray-50 " ref={profileRef}>
+        <div className="  pt-16 bg-gray-50 " >
           {" "}
           <div className="sm:max-w-6xl  sm:mx-5 p-10 xl:mx-auto">
             {" "}
@@ -130,25 +131,26 @@ export default function Profile() {
                 ></img>
               </div>
               <div className="col-span-3 ml-6 sm:ml-16 mt-5">
-                <div>
+                <div className="flex">
                   <span className="text-gray-800 text-3xl  font-thin ">
                     chra othman{" "}
                   </span>
                   <Link to="/setting">
-                    <div className="cursor-pointer  inline text-gray-900 ml-2 font-semibold p-1 px-2   border border-gray-300  rounded  ">
+                    <div className="cursor-pointer   text-gray-900 ml-2 font-semibold p-1 px-2   border border-gray-300  rounded  ">
                       Edit Profile
                     </div>
                   </Link>
+                  <div ref={refModel} className=" flex w-fit h-fit ">
                   <img
                     src="http://localhost:3000/image/setting.png"
-                    className="h-6  w-6 ml-4  inline cursor-pointer "
+                    className="h-6  w-6 ml-4  mt-2 cursor-pointer "
                     alt=""
                     onClick={() => {
-                      setsetting(!setting);
+                      setsetting(setting);
                     }}
                   ></img>
                   {setting && <SettingModel />}
-                </div>
+                </div></div>
                 <div className="mt-6 justify-between flex w-80">
                   <span className="block text-lg  ">
                     5 <p className="inline text-gray-500 ">posts</p>
@@ -283,6 +285,7 @@ export default function Profile() {
           </div>
         </div>
       </div>
+     
     </>
   );
 }
