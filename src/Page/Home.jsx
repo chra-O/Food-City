@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../Commponent/NavBar";
 import Post from "../Commponent/Post";
 import Story from "../Commponent/Story";
 import "../Style/tip.css";
 
 export default function Home() {
+  const [follow, setfollow] = useState(false);
+  const user = [
+    {
+      img: "https://static.remove.bg/remove-bg-web/a72f919da581145bc8a52ac0c5d21f5c4741f367/assets/start-0e837dcc57769db2306d8d659f53555feb500b3c5d456879b9c843d1872e7baa.jpg",
+      name: "Sara ",
+      username: "Sara Ali",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80",
+      name: "Ari ",
+      username: "Ari Aryan ",
+    },
+    {
+      img: "https://d5nunyagcicgy.cloudfront.net/external_assets/hero_examples/hair_beach_v391182663/original.jpeg",
+      name: "Pary ",
+      username: "Pary-marf-26",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1544526226-d4568090ffb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGQlMjBpbWFnZXxlbnwwfHwwfHw%3D&w=1000&q=80",
+      name: "Shanga ",
+      username: "Shanga-18",
+    },
+  ];
   return (
     <>
       <NavBar
@@ -38,54 +61,27 @@ export default function Home() {
                 <p className="text-gray-400 flex-1">Suggestions For You</p>
                 <p>See all</p>
               </div>
-              <div className="flex mt-4">
-                <img
-                  src="http://localhost:3000/image/chra.jpg"
-                  className=" h-10 w-10      rounded-full"
-                  alt=""
-                ></img>
-                <div className="  ml-4 flex-1">
-                  <p>Chra Othman</p>
-                  <p className="text-gray-500 text-sm">chra.othan.a</p>
-                </div>
-                <p className="text-blue-500 ml-24 mt-4 text-sm cursor-pointer">Follow</p>
-              </div>
-              <div className="flex mt-4">
-                <img
-                  src="http://localhost:3000/image/chra.jpg"
-                  className=" h-10 w-10      rounded-full"
-                  alt=""
-                ></img>
-                <div className="  ml-4 flex-1">
-                  <p>Chra Othman</p>
-                  <p className="text-gray-500 text-sm hover:underline cursor-pointer">chra.othan.a</p>
-                </div>
-                <p className="text-blue-500 ml-24 mt-4 text-sm cursor-pointer">Follow</p>
-              </div>
-              <div className="flex mt-4">
-                <img
-                  src="http://localhost:3000/image/chra.jpg"
-                  className=" h-10 w-10      rounded-full"
-                  alt=""
-                ></img>
-                <div className="  ml-4 flex-1">
-                  <p>Chra Othman</p>
-                  <p className="text-gray-500 text-sm">chra.othan.a</p>
-                </div>
-                <p className="text-blue-500 ml-24 mt-4 text-sm cursor-pointer">Follow</p>
-              </div>
-              <div className="flex mt-4">
-                <img
-                  src="http://localhost:3000/image/chra.jpg"
-                  className=" h-10 w-10      rounded-full"
-                  alt=""
-                ></img>
-                <div className="  ml-4 flex-1">
-                  <p>Chra Othman</p>
-                  <p className="text-gray-500 text-sm">chra.othan.a</p>
-                </div>
-                <p className="text-blue-500 ml-24 mt-4 text-sm cursor-pointer">Follow</p>
-              </div>
+              {user.map((e) => {
+                return (
+                  <>
+                    <div className="flex mt-4">
+                      <img
+                        src={e.img}
+                        className=" h-10 w-10      rounded-full"
+                        alt=""
+                      ></img>
+                      <div className="  ml-4 flex-1">
+                        <p>{e.name}</p>
+                        <p className="text-gray-500 text-sm hover:underline hover:cursor-pointer">{e.username}</p>
+                      </div>
+                      <p className="text-blue-500 ml-24 mt-4 text-sm cursor-pointer">
+                        Follow
+                      </p>
+                    </div>
+                  </>
+                );
+              })}
+
               <div className="text-gray-400 w-80 mt-10 text-sm">
                 help .contact .jop .Api .Acount
               </div>

@@ -30,7 +30,7 @@ export default function LogInPage() {
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2">
           <div className="invisible sm:invisible md:visible">
             <img
-              src="http://localhost:3000/image/logo.png"
+              src="./Image/logo.png"
               className=" sm:w-0 mt-16 mr-16 w-0 md:w-80"
               alt=""
             ></img>
@@ -92,7 +92,7 @@ export default function LogInPage() {
               </div>
               <button className="mt-4 flex">
                 <img
-                  src="http://localhost:3000/image/facebook.png"
+                  src="./Image/facebook.png"
                   className="w-5 mr-2"
                   alt=""
                 ></img>
