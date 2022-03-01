@@ -40,7 +40,7 @@ export default function ShowMassage() {
               </div>
             </Link>
           </div>{" "}
-          <div className="sm:max-w-xl  sm:mx-5 xl:mx-auto mt-4  bg-white border border-solid border-gray-300 rounded-md">
+          <div className="sm:max-w-lg  sm:mx-5 xl:mx-auto mt-4  bg-white border border-solid border-gray-300 rounded-md">
             <div className="grid grid-cols-1  ">
               <div className="w-full border-b-2 h-16 flex items-center ">
                 <img
@@ -72,9 +72,14 @@ export default function ShowMassage() {
                 </div>
                 <div className=" flex items-end ">
                   <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
-                    <div>
+                    <div className="flex items-center">
+                      <img
+                        src="http://localhost:3000/image/chra.jpg"
+                        className=" h-6 w-6 mr-2 flex   rounded-full"
+                        alt=""
+                      ></img>
                       <div className="px-4 py-2 rounded-full  bg-blue-600 text-white  ">
-                        zheera
+                        yesssss thanks
                       </div>
                     </div>
                   </div>
@@ -84,25 +89,45 @@ export default function ShowMassage() {
                     <div>
                       <div className=" flex justify-end bg-slate-400 text-white px-4 py-2 rounded-full  ">
                         {" "}
-                        hi
+                        are you good?
+                      </div>
+                    </div>
+                  </div>
+                </div>{" "}
+                <div className="flex items-end justify-end">
+                  <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
+                    <div>
+                      <div className=" flex justify-end bg-slate-400 text-white px-4 py-2 rounded-full  ">
+                        {" "}
+                        iam good thank you?
                       </div>
                     </div>
                   </div>
                 </div>{" "}
                 <div className=" flex items-end ">
                   <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
-                    <div>
+                    <div className="flex items-center">
+                      <img
+                        src="http://localhost:3000/image/chra.jpg"
+                        className=" h-6 w-6 mr-2 flex   rounded-full"
+                        alt=""
+                      ></img>
                       <div className="px-4 py-2 rounded-full  bg-blue-600 text-white  ">
-                        firtst chathhhhhhhhhhhhhhhh
+                        are you ok ?
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className=" flex items-end ">
                   <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
-                    <div>
+                    <div className="flex items-center">
+                      <img
+                        src="http://localhost:3000/image/chra.jpg"
+                        className=" h-6 w-6 mr-2 flex   rounded-full"
+                        alt=""
+                      ></img>
                       <div className="px-4 py-2 rounded-full  bg-blue-600 text-white  ">
-                        firtst chat
+                        how are you
                       </div>
                     </div>
                   </div>
@@ -112,16 +137,21 @@ export default function ShowMassage() {
                     <div>
                       <div className=" flex justify-end bg-slate-400 text-white px-4 py-2 rounded-full  ">
                         {" "}
-                        hi
+                        hello
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className=" flex items-end ">
                   <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
-                    <div>
+                    <div className="flex items-center">
+                      <img
+                        src="http://localhost:3000/image/chra.jpg"
+                        className=" h-6 w-6 mr-2  rounded-full"
+                        alt=""
+                      ></img>
                       <div className="px-4 py-2 rounded-full  bg-blue-600 text-white  ">
-                        firtst chathhhhhhhhhhhhhhhh
+                        hi
                       </div>
                     </div>
                   </div>
@@ -136,7 +166,7 @@ export default function ShowMassage() {
                   alt=""
                 ></img>{" "}
                 <button
-                  className="text-blue-400 absolute ml-[500px] mt-2 font-semibold text-lg "
+                  className="text-blue-400 absolute ml-[430px] mt-3 font-semibold text-lg "
                   onClick={handleAdd}
                 >
                   send

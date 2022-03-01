@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../Commponent/NavBar";
 
 export default function Messanger() {
+  const [see ,setsee] = useState(false)
   return (
     <>
       <NavBar
@@ -33,11 +34,11 @@ export default function Messanger() {
                   </div>
                 </div>
               </Link>
-              <Link to="/showMassage">
-                <div className="flex sm:p-6 p-3 bg-gray-100 ">
+              <Link to="/showMassage" >
+                <div className={`flex sm:p-6 p-3 ${see? "bg-gray-100" :"bg-white"} `} onClick={(e)=>{setsee(true)}}>
                   <img
                     src="http://localhost:3000/image/chra.jpg"
-                    className=" h-12 w-12   bg-slate-500 rounded-full"
+                    className=" h-12 w-12    rounded-full"
                     alt=""
                   ></img>
                   <div className="grid grid-rows-2">

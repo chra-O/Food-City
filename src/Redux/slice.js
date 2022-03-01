@@ -4,6 +4,7 @@ const initialState = {
   not: true,
   messanger: true,
   chats: [],
+  see: true,
 };
 
 const slice = createSlice({
@@ -19,9 +20,13 @@ const slice = createSlice({
     addChat: (state, action) => {
       state.chats.push(action.payload);
     },
+    seemassage: (state, action) => {
+      state.see = false;
+    },
   },
 });
 
-export const { isShowNotification, isShowmessanger  ,addChat} = slice.actions;
+export const { isShowNotification, isShowmessanger, addChat, seemassage } =
+  slice.actions;
 
 export default slice.reducer;
