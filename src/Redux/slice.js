@@ -4,7 +4,12 @@ const initialState = {
   not: true,
   messanger: true,
   chats: [],
-  see: true,
+  chatsone: [],
+  chatstwo: [],
+  seeone: false,
+  setttow:true,
+  seethre :true,
+  levi :false,
 };
 
 const slice = createSlice({
@@ -20,13 +25,26 @@ const slice = createSlice({
     addChat: (state, action) => {
       state.chats.push(action.payload);
     },
-    seemassage: (state, action) => {
-      state.see = false;
+    addChattwo: (state, action) => {
+      state.chatsone.push(action.payload);
     },
+    addChatthree: (state, action) => {
+      state.chatstwo.push(action.payload);
+    },
+    seemassage: (state ) => {
+      state.seeone = false;
+    },
+    messagetwo: (state) => {
+      state.setttow = false;
+    },
+    messageseethre: (state ) => {
+      state.seethre = false;
+    },
+    
   },
 });
 
-export const { isShowNotification, isShowmessanger, addChat, seemassage } =
+export const { isShowNotification, isShowmessanger, addChat, seemassage ,messagetwo ,messageseethre ,addChattwo ,addChatthree } =
   slice.actions;
 
 export default slice.reducer;

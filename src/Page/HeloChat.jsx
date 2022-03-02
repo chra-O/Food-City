@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { addChat } from "../Redux/slice";
+import { addChattwo } from "../Redux/slice";
 
-export default function ShowMassage(props) {
-  const chat = useSelector((state) => state.notify.chats);
+export default function HeloChat(props) {
+  const chat = useSelector((state) => state.notify.chatsone);
 
   const dispatch = useDispatch();
 
@@ -12,10 +12,9 @@ export default function ShowMassage(props) {
 
   const handleAdd = (event) => {
     event.preventDefault();
-    dispatch(addChat(chatting));
+    dispatch(addChattwo(chatting));
     setchatting("");
   };
-
   return (
     <>
       {" "}
