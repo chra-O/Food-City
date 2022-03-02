@@ -118,11 +118,13 @@ export default function NavBar(props) {
               className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
               alt=""
             ></img>
-            <img
-              src={props.compasss}
-              className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
-              alt=""
-            ></img>
+            <Link to="/allpost">
+              <img
+                src={props.compasss}
+                className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
+                alt=""
+              ></img>
+            </Link>
             <div className="relative ">
               {" "}
               <Link to="/Notification">
