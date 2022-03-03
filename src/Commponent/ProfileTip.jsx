@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import SwitchAcount from "../Model/SwitchAcount";
 
 export default function ProfileTip() {
+  const [setting, setsetting] = useState(false);
   return (
     <>
       <div className="profile absolute top-14 bg-white w-64 -left-10 -translate-x-1/2 shadow-xl pt-4 rounded-lg  ">
@@ -37,15 +39,22 @@ export default function ProfileTip() {
               Setting
             </p>
           </Link>
-          <p className="m-3 cursor-pointer ">
+
+          <p
+            className="m-3 cursor-pointer "
+            onClick={() => {
+              setsetting(true);
+            }}
+          >
             <img
               src="http://localhost:3000/image/sewitch.png"
               className="h-4 w-4 mr-3 inline  -rotate-90 "
               alt=""
             ></img>
             Switch Accounts
+            {setting && <SwitchAcount />}
           </p>
-
+          
           <div className="h-[1px] w-full bg-slate-500"></div>
           <p className="m-3 cursor-pointer ">
             {" "}

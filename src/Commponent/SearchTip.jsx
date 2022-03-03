@@ -81,6 +81,99 @@ export default function SearchTip() {
               ></img>
             </div>
           </div>
+          <div className="flex items-center justify-between cursor-pointer p-1 hover:bg-slate-50 ml-3 mr-3">
+            <div className="flex items-center">
+              <div className="relative ">
+                {" "}
+                <img
+                  src="https://wallpaperaccess.com/full/1359011.jpg"
+                  className="h-12 w-12  rounded-full"
+                  alt=""
+                ></img>
+              </div>
+              <div className="pl-2">
+                <div className="text-md font-semibold "> Zhako </div>
+                <div className="text-gray-500">Zhako.babe</div>
+              </div>
+            </div>
+            <div className="">
+              {" "}
+              <img
+                src="http://localhost:3000/image/cross2.png"
+                className="h-5 w-5 mt-1 text-gray-400  cursor-pointer  "
+                alt=""
+              ></img>
+            </div>
+          </div>  <div className="flex items-center justify-between cursor-pointer p-1 hover:bg-slate-50 ml-3 mr-3">
+            <div className="flex items-center">
+              <div className="relative ">
+                {" "}
+                <img
+                  src="https://wallpaperaccess.com/full/1359011.jpg"
+                  className="h-12 w-12  rounded-full"
+                  alt=""
+                ></img>
+              </div>
+              <div className="pl-2">
+                <div className="text-md font-semibold "> Zhako </div>
+                <div className="text-gray-500">Zhako.babe</div>
+              </div>
+            </div>
+            <div className="">
+              {" "}
+              <img
+                src="http://localhost:3000/image/cross2.png"
+                className="h-5 w-5 mt-1 text-gray-400  cursor-pointer  "
+                alt=""
+              ></img>
+            </div>
+          </div>  <div className="flex items-center justify-between cursor-pointer p-1 hover:bg-slate-50 ml-3 mr-3">
+            <div className="flex items-center">
+              <div className="relative ">
+                {" "}
+                <img
+                  src="https://wallpaperaccess.com/full/1359011.jpg"
+                  className="h-12 w-12  rounded-full"
+                  alt=""
+                ></img>
+              </div>
+              <div className="pl-2">
+                <div className="text-md font-semibold "> Zhako </div>
+                <div className="text-gray-500">Zhako.babe</div>
+              </div>
+            </div>
+            <div className="">
+              {" "}
+              <img
+                src="http://localhost:3000/image/cross2.png"
+                className="h-5 w-5 mt-1 text-gray-400  cursor-pointer  "
+                alt=""
+              ></img>
+            </div>
+          </div>  <div className="flex items-center justify-between cursor-pointer p-1 hover:bg-slate-50 ml-3 mr-3">
+            <div className="flex items-center">
+              <div className="relative ">
+                {" "}
+                <img
+                  src="https://wallpaperaccess.com/full/1359011.jpg"
+                  className="h-12 w-12  rounded-full"
+                  alt=""
+                ></img>
+              </div>
+              <div className="pl-2">
+                <div className="text-md font-semibold "> Zhako </div>
+                <div className="text-gray-500">Zhako.babe</div>
+              </div>
+            </div>
+            <div className="">
+              {" "}
+              <img
+                src="http://localhost:3000/image/cross2.png"
+                className="h-5 w-5 mt-1 text-gray-400  cursor-pointer  "
+                alt=""
+              ></img>
+            </div>
+          </div>
           
           
         </div>

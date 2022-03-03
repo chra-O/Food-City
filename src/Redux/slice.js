@@ -6,10 +6,10 @@ const initialState = {
   chats: [],
   chatsone: [],
   chatstwo: [],
-  seeone: false,
-  setttow:true,
-  seethre :true,
-  levi :false,
+  seeone: true,
+  setttow: true,
+  seethre: true,
+  levi: false,
 };
 
 const slice = createSlice({
@@ -31,20 +31,27 @@ const slice = createSlice({
     addChatthree: (state, action) => {
       state.chatstwo.push(action.payload);
     },
-    seemassage: (state ) => {
+    seemassage: (state) => {
       state.seeone = false;
     },
     messagetwo: (state) => {
       state.setttow = false;
     },
-    messageseethre: (state ) => {
+    messageseethre: (state) => {
       state.seethre = false;
     },
-    
   },
 });
 
-export const { isShowNotification, isShowmessanger, addChat, seemassage ,messagetwo ,messageseethre ,addChattwo ,addChatthree } =
-  slice.actions;
+export const {
+  isShowNotification,
+  isShowmessanger,
+  addChat,
+  seemassage,
+  messagetwo,
+  messageseethre,
+  addChattwo,
+  addChatthree,
+} = slice.actions;
 
 export default slice.reducer;

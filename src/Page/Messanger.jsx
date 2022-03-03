@@ -10,7 +10,7 @@ export default function Messanger() {
   const seeone = useSelector((state) => state.notify.seeone);
   const seettow = useSelector((state) => state.notify.setttow);
   const seetthree = useSelector((state) => state.notify.seethre);
-  const [levi, setlevi] = useState(true);
+  const [levi, setlevi] = useState(false);
   const [hero, setero] = useState(false);
   const [azzad, setazzad] = useState(false);
 
@@ -66,7 +66,7 @@ export default function Messanger() {
                   {" "}
                   <p className="  ml-4 text-black ">levi </p>
                   <p className=" ml-4 text-gray-500   w-full">
-                    see you in the last war to save word
+                    see you soon
                   </p>{" "}
                 </div>
               </div>
