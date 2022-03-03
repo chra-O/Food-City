@@ -71,13 +71,13 @@ export default function Notification() {
       />
       <div className="  pt-16 bg-gray-50  h-fit pb-40 ">
         {" "}
-        <div className="sm:max-w-2xl  sm:mx-5  xl:mx-auto mt-12 bg-white border border-solid border-gray-300 rounded-md overflow-y-scroll h-[600px]">
+        <div className="sm:max-w-2xl  sm:mx-5 mx-1 xl:mx-auto mt-12 bg-white border border-solid border-gray-300 rounded-md overflow-y-scroll h-[600px]">
           <div className="grid grid-cols-1 ">
             {" "}
             <Link to="/follower">
-              <div className=" flex  h-20 border-b-2">
+              <div className=" flex  h-20 border-b-2 ml-5 ">
                 {" "}
-                <div className="flex relative items-center ml-10 ">
+                <div className="flex relative items-center  ">
                   <img
                     src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
                     className="  h-10 w-10    bg-slate-500 rounded-full"
@@ -85,17 +85,17 @@ export default function Notification() {
                   ></img>{" "}
                   <img
                     src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8N3x8fGVufDB8fHx8&w=1000&q=80"
-                    className=" absolute top-8 left-2 h-10 w-10   bg-slate-500 rounded-full"
+                    className=" absolute top-7 left-1 h-10 w-10   bg-slate-500 rounded-full"
                     alt=""
                   ></img>{" "}
                 </div>
-                <h1 className="mt-6 font-semibold ml-5">
+                <h1 className=" mt-6 font-semibold ml-6 ">
                   Follow Request{" "}
                   <p className="text-sm text-gray-400">ali and + 192 other</p>
                 </h1>
                 <img
                   src="http://localhost:3000/image/rightarrow.png"
-                  className="   h-10 w-10  mt-6 sm:ml-96 ml-72"
+                  className="   h-10 w-10  mt-6 sm:ml-72 ml-64 md:ml-96"
                   alt=""
                 ></img>{" "}
               </div>
@@ -104,7 +104,7 @@ export default function Notification() {
               return (
                 <>
                   {" "}
-                  <div className="flex sm:p-6 p-3 h-20 ">
+                  <div className="flex  sm:p-6 p-6 h-20 ">
                     <div className=" ">
                       {" "}
                       <img
@@ -122,7 +122,7 @@ export default function Notification() {
                     </p>
                     {console.log(e.action)}
                     {e.action ? (
-                      <button className=" text-black px-3  border rounded-md flex  border-gray-400  sm:ml-20 ">
+                      <button className=" text-black px-3  border rounded-md flex  border-gray-400   sm:ml-20 ">
                         following
                       </button>
                     ) : (
