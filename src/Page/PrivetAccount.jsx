@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import NavBar from "../Commponent/NavBar";
+import BolckModel from "../Model/BolckModel";
 
 export default function PrivetAccount() {
   const showdata = useSelector((state) => state.notify.user);
+  const [follow, setfollow] = useState(true);
+  const [setting, setsetting] = useState(false);
+  const refModel = useRef(null);
+  useEffect(() => {
+    const setinglick = (e) => {
+      if (!refModel?.current?.contains(e.target)) {
+        setsetting(false);
+      } else {
+        setsetting(true);
+      }
+    };
+    document.addEventListener("mousedown", setinglick);
+    return () => {
+      document.removeEventListener("mousedown", setinglick);
+    };
+  }, []);
 
   return (
     <div>
@@ -37,16 +54,28 @@ export default function PrivetAccount() {
                         {e.name}
                       </span>
 
-                      <div className="cursor-pointer    ml-4 font-semibold p-1 px-2 h-9 mt-2   bg-blue-500 text-white border  rounded  ">
-                        Follow
+                      <div
+                        className="cursor-pointer    ml-4 font-semibold p-1 px-2 h-9 mt-1  bg-blue-500 text-white border  rounded w-28 text-center "
+                        onClick={(e) => {
+                          setfollow(!follow);
+                        }}
+                      >
+                        {follow ? " Follow" : " UnFollow"}
                       </div>
 
-                      <div className=" flex w-fit h-fit ">
+                      <div
+                        className=" flex w-fit h-fit "
+                        ref={refModel}
+                        onClick={() => {
+                          setsetting(setting);
+                        }}
+                      >
                         <img
                           src="http://localhost:3000/image/threeDot.png"
                           className="h-6  w-6 ml-4  mt-2 cursor-pointer "
                           alt=""
                         ></img>
+                        {setting && <BolckModel />}
                       </div>
                     </div>
                     <div className="mt-6 justify-between flex w-80">
@@ -91,10 +120,10 @@ export default function PrivetAccount() {
                           </div>
                         </div>{" "}
                         <div className="flex justify-center items-center text-black text-3xl mt-3  font-thin">
-                        This Account is Private
+                          This Account is Private
                         </div>
                         <div className="flex justify-center items-center text-black text-base mt-3  font-thin w-72">
-                        Follow to see their photos and videos.
+                          Follow to see their photos and videos.
                         </div>
                       </div>
                     </div>

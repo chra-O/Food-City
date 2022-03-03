@@ -48,13 +48,26 @@ export default function Azzadchating(props) {
                 })}
               </div>{" "}
             </div>
-
+            <div className=" flex items-end ">
+              <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
+                <div className="flex items-center">
+                  <img
+                    src={props.img}
+                    className=" h-6 w-6 mr-2  rounded-full"
+                    alt=""
+                  ></img>
+                  <div className="px-4 py-2 rounded-full  bg-blue-600 text-white   ">
+                    bashm swpas
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="flex items-end justify-end">
               <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
                 <div>
                   <div className=" flex justify-end bg-slate-400 text-white px-4 py-2 rounded-full  mb-2 ">
                     {" "}
-                    hello
+                    choni
                   </div>
                 </div>
               </div>
@@ -63,12 +76,96 @@ export default function Azzadchating(props) {
               <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
                 <div className="flex items-center">
                   <img
-                    src="http://localhost:3000/image/chra.jpg"
+                    src={props.img}
+                    className=" h-6 w-6 mr-2  rounded-full"
+                    alt=""
+                  ></img>
+                  <div className="px-4 py-2 rounded-full  bg-blue-600 text-white   ">
+                    inshallaa
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className=" flex items-end ">
+              <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
+                <div className="flex items-center">
+                  <img
+                    src={props.img}
+                    className=" h-6 w-6 mr-2  rounded-full"
+                    alt=""
+                  ></img>
+                  <div className="px-4 py-2 rounded-full  bg-blue-600 text-white w-56  ">
+                    inshallaa shteky zor zor bahs abte ba nsybt 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className=" flex items-end ">
+              <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
+                <div className="flex items-center">
+                  <img
+                    src={props.img}
                     className=" h-6 w-6 mr-2  rounded-full"
                     alt=""
                   ></img>
                   <div className="px-4 py-2 rounded-full  bg-blue-600 text-white  ">
-                    hi
+                   hisch esh nakayt ?
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className=" flex items-end ">
+              <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
+                <div className="flex items-center">
+                  <img
+                    src={props.img}
+                    className=" h-6 w-6 mr-2  rounded-full"
+                    alt=""
+                  ></img>
+                  <div className="px-4 py-2 rounded-full  bg-blue-600 text-white  ">
+                    zankot tawawkrd ?
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className=" flex items-end ">
+              <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
+                <div className="flex items-center">
+                  <img
+                    src={props.img}
+                    className=" h-6 w-6 mr-2  rounded-full"
+                    alt=""
+                  ></img>
+                  <div className="px-4 py-2 rounded-full  bg-blue-600 text-white  ">
+                    hamwyan bashn 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className=" flex items-end ">
+              <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
+                <div className="flex items-center">
+                  <img
+                    src={props.img}
+                    className=" h-6 w-6 mr-2  rounded-full"
+                    alt=""
+                  ></img>
+                  <div className="px-4 py-2 rounded-full  bg-blue-600 text-white  ">
+                    malawa chonn ?
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className=" flex items-end ">
+              <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
+                <div className="flex items-center">
+                  <img
+                    src={props.img}
+                    className=" h-6 w-6 mr-2  rounded-full"
+                    alt=""
+                  ></img>
+                  <div className="px-4 py-2 rounded-full  bg-blue-600 text-white  ">
+                    chony bashy ?
                   </div>
                 </div>
               </div>

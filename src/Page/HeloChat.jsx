@@ -63,7 +63,7 @@ export default function HeloChat(props) {
               <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
                 <div className="flex items-center">
                   <img
-                    src="http://localhost:3000/image/chra.jpg"
+                    src={props.img}
                     className=" h-6 w-6 mr-2  rounded-full"
                     alt=""
                   ></img>

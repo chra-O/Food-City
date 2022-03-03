@@ -49,7 +49,62 @@ export default function ShowMassage(props) {
                 })}
               </div>{" "}
             </div>
-
+            <div className=" flex items-end ">
+              <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
+                <div className="flex items-center">
+                  <img
+                    src={props.img}
+                    className=" h-6 w-6 mr-2  rounded-full"
+                    alt=""
+                  ></img>
+                  <div className="px-4 py-2 rounded-full  bg-blue-600 text-white  ">
+                  Any nice plans for the coming days?
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className=" flex items-end ">
+              <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
+                <div className="flex items-center">
+                  <img
+                    src={props.img}
+                    className=" h-6 w-6 mr-2  rounded-full"
+                    alt=""
+                  ></img>
+                  <div className="px-4 py-2 rounded-full  bg-blue-600 text-white  ">
+                  Any nice plans for the coming days?
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className=" flex items-end ">
+              <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
+                <div className="flex items-center">
+                  <img
+                    src={props.img}
+                    className=" h-6 w-6 mr-2  rounded-full"
+                    alt=""
+                  ></img>
+                  <div className="px-4 py-2 rounded-full  bg-blue-600 text-white  ">
+                  Did you have a nice weekend?
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className=" flex items-end ">
+              <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
+                <div className="flex items-center">
+                  <img
+                    src={props.img}
+                    className=" h-6 w-6 mr-2  rounded-full"
+                    alt=""
+                  ></img>
+                  <div className="px-4 py-2 rounded-full  bg-blue-600 text-white  ">
+                   how are you ?
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="flex items-end justify-end">
               <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
                 <div>
@@ -64,7 +119,7 @@ export default function ShowMassage(props) {
               <div className="flex  flex-col  text-sm max-w-xs mx-2 order-2 items-start">
                 <div className="flex items-center">
                   <img
-                    src="http://localhost:3000/image/chra.jpg"
+                    src={props.img}
                     className=" h-6 w-6 mr-2  rounded-full"
                     alt=""
                   ></img>

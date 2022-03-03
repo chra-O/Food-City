@@ -50,7 +50,8 @@ export default function Story() {
       id: "9",
       username: "sweet",
       img: "https://www.efsa.europa.eu/sites/default/files/styles/share_opengraph/public/2021-03/experts_food_additives.jpg?h=827069f2&itok=Al_Mu6TK",
-    }, {
+    },
+    {
       id: "10",
       username: "sweet",
       img: "https://www.efsa.europa.eu/sites/default/files/styles/share_opengraph/public/2021-03/experts_food_additives.jpg?h=827069f2&itok=Al_Mu6TK",
@@ -87,7 +88,7 @@ export default function Story() {
           <div
             ref={storeRef}
             onScroll={scrollHundlle}
-            className="  flex space-x-4 overflow-x-scroll max-w-5xl  p-2 scroll-smooth  scrollbar-hide  bg-white border "
+            className="  flex space-x-4 overflow-x-scroll max-w-5xl  p-2 scroll-smooth  scrollbar-hide  bg-white border rounded-md "
           >
             {savedStory.map((story) => {
               return (
