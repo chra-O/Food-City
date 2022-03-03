@@ -13,27 +13,43 @@ export default function Home() {
   const user = [
     {
       img: "https://static.remove.bg/remove-bg-web/a72f919da581145bc8a52ac0c5d21f5c4741f367/assets/start-0e837dcc57769db2306d8d659f53555feb500b3c5d456879b9c843d1872e7baa.jpg",
-      name: "Sara ",
+      name: "Sara-halala ",
       username: "Sara Ali",
       descrption: "life and smile",
+      post:"6",
+      follower:"126",
+      following:"2986",
+      hashtag:"#baby#babygril#honey"
     },
     {
       img: "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80",
-      name: "Ari ",
+      name: "Ari-zheer-18 ",
       username: "Ari Aryan ",
       descrption: "sport (runnuing swimming )",
+      post:"0",
+      follower:"16",
+      following:"86",
+      hashtag:"#sweet#pizza"
     },
     {
       img: "https://d5nunyagcicgy.cloudfront.net/external_assets/hero_examples/hair_beach_v391182663/original.jpeg",
-      name: "Pary ",
+      name: "Pary-muhammd ",
       username: "Pary-marf-26",
       descrption: " typing ....",
+      post:"90",
+      follower:"1262",
+      following:"9986",
+      hashtag:"#life#sport#food#game#love"
     },
     {
       img: "https://images.unsplash.com/photo-1544526226-d4568090ffb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGQlMjBpbWFnZXxlbnwwfHwwfHw%3D&w=1000&q=80",
-      name: "Shanga ",
+      name: "Shanga-sherzad ",
       username: "Shanga-18",
       descrption: "just keep going ....",
+      post:"1",
+      follower:"386",
+      following:"1326",
+      hashtag:"#myselve"
     },
   ];
   function handeluser(e) {

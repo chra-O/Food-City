@@ -4,8 +4,7 @@ import NavBar from "../Commponent/NavBar";
 
 export default function PrivetAccount() {
   const showdata = useSelector((state) => state.notify.user);
-  console.log(showdata);
-  
+
   return (
     <div>
       <NavBar
@@ -38,7 +37,7 @@ export default function PrivetAccount() {
                         {e.name}
                       </span>
 
-                      <div className="cursor-pointer    ml-4 font-semibold p-1 px-2   bg-blue-500 text-white border  rounded  ">
+                      <div className="cursor-pointer    ml-4 font-semibold p-1 px-2 h-9 mt-2   bg-blue-500 text-white border  rounded  ">
                         Follow
                       </div>
 
@@ -52,13 +51,15 @@ export default function PrivetAccount() {
                     </div>
                     <div className="mt-6 justify-between flex w-80">
                       <span className="block text-lg  ">
-                        5 <p className="inline text-gray-500 ">posts</p>
+                        {e.post} <p className="inline text-gray-500 ">posts</p>
                       </span>
                       <span className="block text-lg  ">
-                        168 <p className="inline text-gray-500 ">followers</p>
+                        {e.follower}{" "}
+                        <p className="inline text-gray-500 ">followers</p>
                       </span>
                       <span className="block text-lg  ">
-                        852 <p className="inline text-gray-500 ">following</p>
+                        {e.following}{" "}
+                        <p className="inline text-gray-500 ">following</p>
                       </span>
                     </div>
                     <div className="mt-7">
@@ -69,15 +70,34 @@ export default function PrivetAccount() {
                       <p className=" text-gray-700 text-lg"> {e.descrption}</p>
                     </div>
                     <div className="text-blue-500 w-80 mt-2  ">
-                      <p>#chra#food#word#fun#happy#quran#kurdistan</p>
+                      <p>{e.hashtag}</p>
                     </div>
                   </div>
                 </div>
                 <hr className="border-gray-300 mt-14 " />
                 <div className="flex justify-center gap-10  text-sm text-gray-500 font-bold ">
                   <div className="flex justify-center  items-center ">
-                    {" "}
-                    <></>
+                    <div className=" h-screen pt-16 bg-gray-50 ">
+                      {" "}
+                      <div className="sm:max-w-6xl  sm:mx-5 p-10 xl:mx-auto  ">
+                        <div className="flex justify-center items-center">
+                          <div className="w-20 h-20 rounded-full  flex justify-center items-center border-black border-2 ">
+                            {" "}
+                            <img
+                              src="http://localhost:3000/image/tag.png"
+                              className=" w-14 h-14"
+                              alt=""
+                            ></img>
+                          </div>
+                        </div>{" "}
+                        <div className="flex justify-center items-center text-black text-3xl mt-3  font-thin">
+                        This Account is Private
+                        </div>
+                        <div className="flex justify-center items-center text-black text-base mt-3  font-thin w-72">
+                        Follow to see their photos and videos.
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
