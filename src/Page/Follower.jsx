@@ -61,20 +61,20 @@ export default function Follower() {
             {follower.map((e) => {
               return (
                 <>
-                  <div className="flex sm:p-6 p-2 ">
+                  <div className="flex sm:p-6 p-2 h-20">
                     <img
                       src={e.img}
-                      className=" h-8 w-8   bg-slate-500 rounded-full"
+                      className=" h-8 w-8   bg-slate-500 rounded-full mt-3"
                       alt=""
                     ></img>
-                    <p className=" flex items-center ml-4 text-black w-52  ">
+                    <p className=" flex items-center ml-4 text-black w-72 h-12 ">
                       {e.name}
                     </p>
-                    <div className=" ml-52 flex gap-2">
-                      <button className="  px-3 py-1 rounded-md flex  bg-sky-400 text-white   ">
+                    <div className="   flex gap-2 mt-3 ml-24">
+                      <button className="  px-3 py-1 rounded-md flex  bg-sky-400 text-white h-8   ">
                         Comferm
                       </button>
-                      <button className=" text-black px-2 py-1 border rounded-md flex  border-gray-400  ">
+                      <button className=" text-black px-2 py-1 border rounded-md flex  border-gray-400 h-8  ">
                         Delete
                       </button>
                     </div>
