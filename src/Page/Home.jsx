@@ -1,33 +1,46 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import NavBar from "../Commponent/NavBar";
 import Post from "../Commponent/Post";
 import Story from "../Commponent/Story";
+import { deletuser, username } from "../Redux/slice";
 import "../Style/tip.css";
 
 export default function Home() {
+  const dispatch = useDispatch();
+
   const user = [
     {
       img: "https://static.remove.bg/remove-bg-web/a72f919da581145bc8a52ac0c5d21f5c4741f367/assets/start-0e837dcc57769db2306d8d659f53555feb500b3c5d456879b9c843d1872e7baa.jpg",
       name: "Sara ",
       username: "Sara Ali",
+      descrption: "life and smile",
     },
     {
       img: "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80",
       name: "Ari ",
       username: "Ari Aryan ",
+      descrption: "sport (runnuing swimming )",
     },
     {
       img: "https://d5nunyagcicgy.cloudfront.net/external_assets/hero_examples/hair_beach_v391182663/original.jpeg",
       name: "Pary ",
       username: "Pary-marf-26",
+      descrption: " typing ....",
     },
     {
       img: "https://images.unsplash.com/photo-1544526226-d4568090ffb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGQlMjBpbWFnZXxlbnwwfHwwfHw%3D&w=1000&q=80",
       name: "Shanga ",
       username: "Shanga-18",
+      descrption: "just keep going ....",
     },
   ];
+  function handeluser(e) {
+    dispatch(deletuser());
+    dispatch(username(e));
+  }
+
   return (
     <>
       <NavBar
@@ -42,22 +55,23 @@ export default function Home() {
           <section className="col-span-2 ">
             <Story />
             <Post />
-           
           </section>
           <section>
             <div className=" mt-6 fixed ml-8   invisible xl:visible">
               <div className="flex">
                 <Link to="/Profile">
                   <div className="flex">
-                <img
-                  src="./Image/chra.jpg"
-                  className=" h-16 w-16      rounded-full"
-                  alt=""
-                ></img>
-                <div className=" mt-4 ml-4 flex-1">
-                  <p>Chra Othman</p>
-                  <p className="text-gray-400">chra.othan.a</p>
-                </div></div></Link>
+                    <img
+                      src="./Image/chra.jpg"
+                      className=" h-16 w-16      rounded-full"
+                      alt=""
+                    ></img>
+                    <div className=" mt-4 ml-4 flex-1">
+                      <p>Chra Othman</p>
+                      <p className="text-gray-400">chra.othan.a</p>
+                    </div>
+                  </div>
+                </Link>
                 <p className="text-blue-500 ml-24 mt-5 text-sm">switch</p>
               </div>
               <div className="flex mt-10">
@@ -67,7 +81,7 @@ export default function Home() {
               {user.map((e) => {
                 return (
                   <>
-                    <div className="flex mt-4">
+                    <div className="flex mt-4" key={e.name}>
                       <img
                         src={e.img}
                         className=" h-10 w-10      rounded-full"
@@ -75,9 +89,14 @@ export default function Home() {
                       ></img>
                       <div className="  ml-4 flex-1">
                         <p>{e.name}</p>
-                        <p className="text-gray-500 text-sm hover:underline hover:cursor-pointer">
-                          {e.username}
-                        </p>
+                        <Link to="/account">
+                          <p
+                            className="text-gray-500 text-sm hover:underline hover:cursor-pointer"
+                            onClick={() => handeluser(e)}
+                          >
+                            {e.username}
+                          </p>
+                        </Link>
                       </div>
                       <p className="text-blue-500 ml-24 mt-4 text-sm cursor-pointer">
                         follow

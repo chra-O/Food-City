@@ -13,6 +13,7 @@ import Follower from "./Page/Follower";
 import ShowMassage from "./Page/ShowMassage";
 import Setting from "./Page/Setting";
 import AllPost from "./Page/AllPost";
+import PrivetAccount from "./Page/PrivetAccount";
 
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
         <Route path="/showMassage" element={<ShowMassage />} />
         <Route path="/settingprofile" element={<Setting />} />
         <Route path="/allpost" element={<AllPost />} />
+        <Route path="/account" element={<PrivetAccount />} />
+        
      
       
       </Routes>

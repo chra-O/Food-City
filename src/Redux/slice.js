@@ -10,6 +10,7 @@ const initialState = {
   setttow: true,
   seethre: true,
   levi: false,
+  user: [],
 };
 
 const slice = createSlice({
@@ -40,6 +41,12 @@ const slice = createSlice({
     messageseethre: (state) => {
       state.seethre = false;
     },
+    username: (state, action) => {
+      state.user.push(action.payload);
+    },
+    deletuser: (state, action) => {
+      state.user.splice(0, 1);
+    },
   },
 });
 
@@ -52,6 +59,8 @@ export const {
   messageseethre,
   addChattwo,
   addChatthree,
+  username,
+  deletuser
 } = slice.actions;
 
 export default slice.reducer;
