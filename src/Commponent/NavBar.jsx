@@ -4,7 +4,7 @@ import NotificationTip from "./NotificationTip";
 import ProfileTip from "./ProfileTip";
 import SearchTip from "./SearchTip";
 import { useDispatch } from "react-redux";
-import { isShowNotification } from "../Redux/slice";
+import { isShowNotification, searchfliter } from "../Redux/slice";
 import { isShowmessanger } from "../Redux/slice";
 import { useSelector } from "react-redux";
 
@@ -18,6 +18,8 @@ export default function NavBar(props) {
   const dispatch = useDispatch();
   const inputref = useRef(null);
   const profileRef = useRef(null);
+  const [userSearch, setuserSearch] = useState("");
+
   useEffect(() => {
     const oustsiteClick = (e) => {
       if (!inputref?.current?.contains(e.target)) {
@@ -48,6 +50,7 @@ export default function NavBar(props) {
       document.removeEventListener("mousedown", profileClick);
     };
   }, []);
+  dispatch(searchfliter(userSearch));
   return (
     <>
       <div className="shadow-sm border-b bg-white w-full top-0  fixed z-10">
@@ -70,6 +73,8 @@ export default function NavBar(props) {
               type="text"
               placeholder="search"
               className=" inputNavbar   p-1 bg-gray-100  block   outline-gray-100 "
+              value={userSearch}
+              onChange={(e) => setuserSearch(e.target.value.toLowerCase())}
             ></input>
             {corss && (
               <img
