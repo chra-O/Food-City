@@ -3,6 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   not: true,
   messanger: true,
+  usernames: '',
+  password: '',
   chats: [],
   chatsone: [],
   chatstwo: [],
@@ -10,7 +12,7 @@ const initialState = {
   setttow: true,
   seethre: true,
   levi: false,
-  user2: '',
+  user2: "",
   user: [],
   user1: [
     {
@@ -104,13 +106,19 @@ const slice = createSlice({
       state.user1.splice(action.payload, 1);
     },
     clearAll: (state) => {
-      state.user1=[]
+      state.user1 = [];
     },
     searchfliter: (state, action) => {
-      
-      state.user2=action.payload;
-      
+      state.user2 = action.payload;
     },
+    setusername:(state ,action) =>{
+   
+     state.usernames=action.payload
+   
+    },
+    setpassword:(state ,action) =>{
+      state.password = action.payload
+     }
   },
 });
 
@@ -128,6 +136,8 @@ export const {
   deleteuserwithindex,
   clearAll,
   searchfliter,
+  setpassword,
+  setusername,
 } = slice.actions;
 
 export default slice.reducer;

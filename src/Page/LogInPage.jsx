@@ -1,9 +1,15 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 export default function LogInPage() {
   const [showPassword, setShowPassword] = useState(false);
+  const usernameSlice = useSelector((state) => state.notify.usernames);
+  const passwordslice = useSelector((state) => state.notify.password);
   const [hasfild, sethasfild] = useState(false);
+  const [login, setlogin] = useState(false);
+  const [user, setuser] = useState("");
+  const [pass, setpass] = useState("");
+
   const fromRef = useRef(null);
   /////////////
   const pressShow = (e) => {
@@ -22,7 +28,19 @@ export default function LogInPage() {
       sethasfild(false);
     }
   };
-
+  function loginhundle() {
+    if (usernameSlice === user && passwordslice === pass) {
+      alert("done"); setlogin(true)
+    } else {
+      alert("username and password donot mach");
+     
+    }
+  }
+ console.log(usernameSlice)
+ console.log(user)
+ console.log(passwordslice)
+ console.log(pass)
+ 
   //////////////////////
   return (
     <>
@@ -43,7 +61,10 @@ export default function LogInPage() {
               <form ref={fromRef} className="w-72 flex flex-col gap-1 mt-8">
                 <div className="relative">
                   <input
-                    onChange={handelChange}
+                    onChange={(e) => {
+                      handelChange();
+                      setuser(e.target.value);
+                    }}
                     name="username"
                     type="text"
                     className=" peer  w-full rounded border bg-gray-100 p-2 text-xs placeholder-transparent"
@@ -55,7 +76,10 @@ export default function LogInPage() {
                 </div>
                 <div className="relative">
                   <input
-                    onChange={handelChange}
+                    onChange={(e) => {
+                      handelChange();
+                      setpass(e.target.value);
+                    }}
                     name="password"
                     type={showPassword ? "text" : "password"}
                     className=" peer w-full rounded border bg-gray-100 p-2 text-xs placeholder-transparent"
@@ -73,15 +97,27 @@ export default function LogInPage() {
                     {showPassword ? "Hide" : "Show"}
                   </button>
                 </div>
-                <Link to="/home">
+                {login ? (
+                  <Link to="/home">
+                    <button
+                      className={` ${
+                        hasfild ? "bg-gray-900" : "bg-gray-700"
+                      } w-full mt-2 h-8 rounded text-white  text-sm font-medium py-1`}
+                      onClick={loginhundle}
+                    >
+                      Log In
+                    </button>
+                  </Link>
+                ) : (
                   <button
                     className={` ${
                       hasfild ? "bg-gray-900" : "bg-gray-700"
                     } w-full mt-2 h-8 rounded text-white  text-sm font-medium py-1`}
+                    onClick={loginhundle}
                   >
                     Log In
                   </button>
-                </Link>
+                )}
               </form>{" "}
               <div className=" flex space-x-2 w-64 mt-4 items-center">
                 <span className="bg-gray-300 h-px  flex-1" />

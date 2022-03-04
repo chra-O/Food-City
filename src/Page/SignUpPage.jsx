@@ -1,9 +1,16 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setpassword, setusername } from "../Redux/slice";
 export default function SignUpPage() {
   const [showPassword, setShowPassword] = useState(false);
+  const usernameSlice = useSelector((state) => state.notify.usernames);
+  const passwordslice = useSelector((state) => state.notify.password);
   const [hasfild, sethasfild] = useState(false);
   const fromRef = useRef(null);
+  const [user, setuser] = useState("");
+  const [pass, setpass] = useState("");
+  const dispatch = useDispatch();
   /////////////
   const pressShow = (e) => {
     e.preventDefault();
@@ -23,7 +30,12 @@ export default function SignUpPage() {
       sethasfild(false);
     }
   };
-
+  function usenamefunction(e) {
+    handelChange();
+    setuser(e.target.value);
+  }
+  dispatch(setusername(user));
+  dispatch(setpassword(pass));
   return (
     <>
       <div className="flex justify-center flex-col  items-center h-screen bg-slate-50 gap-3">
@@ -54,7 +66,9 @@ export default function SignUpPage() {
           <form ref={fromRef} className="w-72 flex flex-col gap-1 mt-1 ">
             <div className="relative">
               <input
-                onChange={handelChange}
+                onChange={(e) => {
+                  usenamefunction(e);
+                }}
                 name="email"
                 type="text"
                 className=" peer  w-full rounded  border bg-gray-100 p-2 text-xs placeholder-transparent"
@@ -90,7 +104,10 @@ export default function SignUpPage() {
             </div>
             <div className="relative">
               <input
-                onChange={handelChange}
+                onChange={(e) => {
+                  handelChange();
+                  setpass(e.target.value);
+                }}
                 name="password"
                 type={showPassword ? "text" : "password"}
                 className=" peer w-full rounded border bg-gray-100 p-2 text-xs placeholder-transparent"
@@ -108,13 +125,25 @@ export default function SignUpPage() {
                 {showPassword ? "Hide" : "Show"}
               </button>
             </div>
-            <button
-              className={` ${
-                hasfild ? "bg-gray-900" : "bg-gray-700"
-              } w-full mt-2 h-8 rounded text-white  text-sm font-medium py-1`}
-            >
-              Log In
-            </button>
+            {hasfild ? (
+              <Link to="/">
+                <button
+                  className={` ${
+                    hasfild ? "bg-gray-900" : "bg-gray-700"
+                  } w-full mt-2 h-8 rounded text-white  text-sm font-medium py-1`}
+                >
+                  Log In
+                </button>
+              </Link>
+            ) : (
+              <button
+                className={` ${
+                  hasfild ? "bg-gray-900" : "bg-gray-700"
+                } w-full mt-2 h-8 rounded text-white  text-sm font-medium py-1`}
+              >
+                Log In
+              </button>
+            )}
           </form>{" "}
           <p className=" text-center  text-sm mt-6 ml-12  mr-12 text-gray-400">
             By signing up, you agree to our Terms , Data Policy and Cookies
