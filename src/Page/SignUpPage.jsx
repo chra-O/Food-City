@@ -1,11 +1,10 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setpassword, setusername } from "../Redux/slice";
 export default function SignUpPage() {
   const [showPassword, setShowPassword] = useState(false);
-  const usernameSlice = useSelector((state) => state.notify.usernames);
-  const passwordslice = useSelector((state) => state.notify.password);
+
   const [hasfild, sethasfild] = useState(false);
   const fromRef = useRef(null);
   const [user, setuser] = useState("");

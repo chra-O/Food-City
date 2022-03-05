@@ -29,10 +29,10 @@ export default function LogInPage() {
     }
   };
   function loginhundle() {
-    if (usernameSlice === user && passwordslice === pass) {
-      alert("done"); setlogin(true)
+    if (usernameSlice === user && passwordslice === pass &&hasfild===true ) {
+       setlogin(true)
     } else {
-      alert("username and password donot mach");
+      alert("Username and Password do not mach or Sign Up");
      
     }
   }

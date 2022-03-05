@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SwitchAcount() {
   return (
-    <div className="fixed z-20 top-48  right-64">
+    <div className="fixed z-20 top-48 sm:right-36 right-16  lg:right-64">
       <div className=" bg-gray-50 w-[450px] h-[250px] rounded-2xl   shadow-black   shadow-2xl border-2   ">
         <div className="flex justify-center h-12 border-b-2 items-center font-semibold ">
           {" "}
