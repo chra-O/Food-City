@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { isShowNotification, searchfliter } from "../Redux/slice";
 import { isShowmessanger } from "../Redux/slice";
 import { useSelector } from "react-redux";
+import CraetePost from "../Model/CraetePost";
 
 export default function NavBar(props) {
   const [search, setSearch] = useState(true);
@@ -19,6 +20,8 @@ export default function NavBar(props) {
   const inputref = useRef(null);
   const profileRef = useRef(null);
   const [userSearch, setuserSearch] = useState("");
+  const [CratePost, setCratePost] = useState(false);
+  const refModel = useRef(null);
 
   useEffect(() => {
     const oustsiteClick = (e) => {
@@ -51,6 +54,19 @@ export default function NavBar(props) {
     };
   }, []);
   dispatch(searchfliter(userSearch));
+  useEffect(() => {
+    const setinglick = (e) => {
+      if (!refModel?.current?.contains(e.target)) {
+        setCratePost(false);
+      } else {
+        setCratePost(true);
+      }
+    };
+    document.addEventListener("mousedown", setinglick);
+    return () => {
+      document.removeEventListener("mousedown", setinglick);
+    };
+  }, []);
   return (
     <>
       <div className="shadow-sm border-b bg-white w-full top-0  fixed z-10">
@@ -117,12 +133,17 @@ export default function NavBar(props) {
                 </span>
               )}
             </div>
-
-            <img
-              src={props.add}
-              className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
-              alt=""
-            ></img>
+            <div ref={refModel}>
+              <img
+                src={props.add}
+                className="h-7 w-7 mt-4 m-3 text-gray-400 inline cursor-pointer"
+                alt=""
+                onClick={() => {
+                  setCratePost(true);
+                }}
+              ></img>
+              {CratePost && <CraetePost />}
+            </div>
             <Link to="/allpost">
               <img
                 src={props.compasss}
